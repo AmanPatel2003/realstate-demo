@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-const Register = ({ handleShowNotice }) => {
+const Register = ({ handleShowNotice, disabled, setDisabled }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -18,6 +18,7 @@ const Register = ({ handleShowNotice }) => {
   };
 
   const handleSubmit = (e) => {
+    setDisabled(true);
     e.preventDefault();
     // Add form submission logic here
     console.log("Form Data:", formData);
@@ -92,6 +93,7 @@ const Register = ({ handleShowNotice }) => {
           </div>
           <button
             type="submit"
+            disabled={disabled}
             className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
           >
             Register

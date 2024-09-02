@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const Reservation = ({ handleShowNotice }) => {
+const Reservation = ({ handleShowNotice, disabled, setDisabled }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -20,6 +20,7 @@ const Reservation = ({ handleShowNotice }) => {
   };
 
   const handleSubmit = (e) => {
+    setDisabled(true);
     e.preventDefault();
     // Handle form submission
     handleShowNotice();
@@ -129,6 +130,7 @@ const Reservation = ({ handleShowNotice }) => {
           </div>
           <button
             type="submit"
+            disabled={disabled}
             className="w-full bg-blue-500 text-white font-medium py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Submit

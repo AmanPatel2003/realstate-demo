@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-const Application = ({ handleShowNotice }) => {
+const Application = ({ handleShowNotice, disabled, setDisabled }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -25,11 +25,12 @@ const Application = ({ handleShowNotice }) => {
   };
 
   const handleSubmit = (e) => {
+    setDisabled(true);
     e.preventDefault();
     // Here you can add the logic to send the formData to your backend
     console.log("Form submitted:", formData);
-    
-    handleShowNotice()
+
+    handleShowNotice();
   };
 
   return (
@@ -118,6 +119,7 @@ const Application = ({ handleShowNotice }) => {
 
           <button
             type="submit"
+            disabled={disabled}
             className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 mt-4"
           >
             Submit Application
