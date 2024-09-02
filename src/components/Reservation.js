@@ -1,30 +1,29 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-const Reservation = () => {
-
-const [formData, setFormData] = useState({
-  fullName: "",
-  email: "",
-  phoneNumber: "",
-  propertyAddress: "",
-  preferredDateTime: "",
-  specialRequests: "",
-});
-
-const handleChange = (e) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value,
+const Reservation = ({ handleShowNotice }) => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    propertyAddress: "",
+    preferredDateTime: "",
+    specialRequests: "",
   });
-};
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  // Handle form submission
-};
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+    handleShowNotice();
+  };
 
   return (
     <div className=" h-screen flex items-center justify-center">
@@ -138,6 +137,6 @@ const handleSubmit = (e) => {
       </div>
     </div>
   );
-}
+};
 
-export default Reservation
+export default Reservation;
