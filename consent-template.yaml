@@ -1,0 +1,182 @@
+version: '1.0'
+organisation_id: 66d3fcb8cbd66ef0ea3627c0
+applications:
+    -
+        application_id: ce151ce044ebbece
+        type: web app
+        name: Realstates demo
+        stage: development
+        application_user: india
+        collection_points_data:
+            -
+                cp_id: 66d40359cbd66ef0ea3627c2
+                cp_name: Register
+                cp_status: active
+                cp_url: demo.api.com/66d40359cbd66ef0ea3627c2
+                data_elements:
+                    -
+                        data_element: Full name
+                        data_element_collection_status: active
+                        data_element_title: Full name
+                        data_element_description: For know  you
+                        data_owner: []
+                        legal_basis: false
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: f14900d80a26ddfb
+                                purpose_description: For your identification
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c2
+                            -
+                                purpose_id: 406576ba3bc60125
+                                purpose_description: For know your name
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c3
+                            -
+                                purpose_id: 4af66f383ab9fc19
+                                purpose_description: For add you in my collection
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c4
+                        translated_data_element_id: 66d4071bcbd66ef0ea3627c7
+                    -
+                        data_element: Email Address
+                        data_element_collection_status: active
+                        data_element_title: Email address
+                        data_element_description: For unique id
+                        data_owner: []
+                        legal_basis: false
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: a933b66c36f0fe7d
+                                purpose_description: Unique identifire
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c5
+                            -
+                                purpose_id: 4b0055eefdfc6cc4
+                                purpose_description: >-
+                                    The email id allows the platform to verify 
+                                    the user's identity by sending a
+                                    confirmation link, ensuring that the
+                                    registered account belong to  a valid user.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c6
+                            -
+                                purpose_id: 582b9cb140d5f6fe
+                                purpose_description: >-
+                                    In case the user forget their password ,the
+                                    email id  provides a means to securely reset
+                                    it.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c7
+                        translated_data_element_id: 66d4071bcbd66ef0ea3627c8
+                    -
+                        data_element: Phone number
+                        data_element_collection_status: active
+                        data_element_title: Phone number
+                        data_element_description: Provide updated information
+                        data_owner: []
+                        legal_basis: false
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 7fba02dabc0d599b
+                                purpose_description: For account verification
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c8
+                            -
+                                purpose_id: dea8242a846034f2
+                                purpose_description: Two-factor authentication
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2c9
+                            -
+                                purpose_id: d860a80d1ba62400
+                                purpose_description: Password recovery and important  information
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66d4071bd62ddc52033be2ca
+                        translated_data_element_id: 66d4071bcbd66ef0ea3627c9

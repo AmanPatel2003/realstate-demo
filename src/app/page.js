@@ -1,113 +1,717 @@
+import Head from "next/head";
 import Image from "next/image";
-
+import Link from "next/link";
+import { IoSearchOutline } from "react-icons/io5";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="">
+      <div className="">
+        <header className="bg-gray-800 text-white ">
+          <div className="container mx-auto flex justify-between items-center py-4 px-6 w-[80%] m-auto">
+            <h1 className="text-2xl font-bold">Real Estate Platform</h1>
+            <nav>
+              <ul className="flex space-x-4">
+                <li>
+                  <a href="/application" className="hover:text-yellow-300">
+                    Application
+                  </a>
+                </li>
+                <li>
+                  <a href="/feedback" className="hover:text-yellow-300">
+                    Feedback
+                  </a>
+                </li>
+                <li>
+                  <a href="/reservation" className="hover:text-yellow-300">
+                    Reservation
+                  </a>
+                </li>
+                <li>
+                  <a href="/register" className="hover:text-yellow-300">
+                    Register
+                  </a>
+                </li>
+              
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <main className="bg-white">
+          <section
+            className="bg-cover bg-center h-[450px] flex items-center justify-center  m-auto flex-col"
+            style={{ backgroundImage: "url('/landing/banner.webp')" }}
           >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+            <h2 className="text-6xl text-white font-bold w-[60%]  text-center leading-[80px]">
+              The #1 site real estate professionals trust
+            </h2>
+            <div className="w-full flex justify-center items-center  ">
+              <div className="w-[35%] p-4 rounded-full bg-white relative">
+                <input
+                  type="text"
+                  className="w-[90%] outline-none"
+                  placeholder="Address, School, City, Zip or Neighborhood
+"
+                />
+                <span className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-2xl font-bold absolute right-3 top-2 ">
+                  <IoSearchOutline />
+                </span>
+              </div>
+            </div>
+          </section>
+
+          <section className="container mx-auto py-10 w-[80%] m-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-bold">Homes around $649,999</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="card h-[300px]">
+                <div
+                  className="card__front border rounded-lg overflow-hidden shadow-lg "
+                  id="highlight"
+                >
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-1.webp"
+                      alt="Home 1"
+                      height={208}
+                      width={250}
+                      className="object-cover h-[190px] -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+                <div className="card__back border rounded-lg overflow-hidden shadow-lg">
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={308}
+                      width={308}
+                      className="object-cover -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="card__front border rounded-lg overflow-hidden shadow-lg "
+                  id="highlight"
+                >
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={458}
+                      width={450}
+                      className="object-cover  -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+                <div className="card__back border rounded-lg overflow-hidden shadow-lg">
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={308}
+                      width={350}
+                      className="object-cover -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="card__front border rounded-lg overflow-hidden shadow-lg "
+                  id="highlight"
+                >
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={458}
+                      width={450}
+                      className="object-cover  -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+                <div className="card__back border rounded-lg overflow-hidden shadow-lg">
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={308}
+                      width={350}
+                      className="object-cover -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className="card">
+                <div
+                  className="card__front border rounded-lg overflow-hidden shadow-lg "
+                  id="highlight"
+                >
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={458}
+                      width={450}
+                      className="object-cover  -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+                <div className="card__back border rounded-lg overflow-hidden shadow-lg">
+                  <Link
+                    href="/register"
+                    className="border rounded-lg overflow-hidden shadow-lg"
+                  >
+                    <Image
+                      src="/landing/section1-3.webp"
+                      alt="Home 1"
+                      height={308}
+                      width={350}
+                      className="object-cover -mt-6"
+                    />
+                    <div className="p-4">
+                      <h4 className="font-bold text-xl">$442,000</h4>
+                      <p className="text-gray-600">3 bed, 2 bath, 1,829 sqft</p>
+                      <p className="text-gray-600">McKinney, TX 75071</p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="container mx-auto py-10 w-[80%] m-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-bold">Newest Listings</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section1-1.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section2-2.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section2-3.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section2-4.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
+          <section className="container mx-auto py-10 w-[80%] m-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-bold">Upcoming Open Houses</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section3-1.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section3-2.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section3-3.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section3-4.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
+          <section className="container mx-auto py-10 w-[80%] m-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-bold">Affordable Homes</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section4-1.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section4-2.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section4-3.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section4-4.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
+          <section className="container mx-auto py-10 w-[80%] m-auto">
+            <div className="text-center mb-10">
+              <h3 className="text-2xl font-bold">Luxury Homes</h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section5-1.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section5-2.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section5-3.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section5-4.webp"
+                  alt="Home 1"
+                  height={458}
+                  width={440}
+                  className=" object-cover"
+                />
+                <div className="p-4">
+                  <h4 className="font-bold text-xl">$819,000</h4>
+                  <p className="text-gray-600">4 bed, 3 bath, 2,996 sqft</p>
+                  <p className="text-gray-600">McKinney, TX 75071</p>
+                </div>
+              </Link>
+            </div>
+          </section>
+
+          <section
+            className="py-10 m-auto flex items-center justify-center h-[400px] relative overflow-hidden"
+            style={{ backgroundImage: "url('/landing/banner-2.jpg')" }}
+          >
+            <div className="absolute inset-0  backdrop-blur-sm"></div>
+            <div className="container mx-auto text-center z-10">
+              <div className="h-[100px]">
+                <h3 className="text-2xl font-bold mb-4">
+                  The 10 Markets That Could See the Biggest Home Affordability
+                  Gains as Mortgage Rates Drop
+                </h3>
+                <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                  Read Article
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-white py-10 w-[80%] m-auto">
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section6-1.jpg"
+                  alt="Home 1"
+                  height={300}
+                  width={300}
+                  className=" object-cover"
+                />
+
+                <p className="text-gray-600 p-2 text-sm">
+                  Tired of Waiting for Lower Mortgage Rates? 4 Steps That...
+                </p>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section6-2.jpg"
+                  alt="Home 1"
+                  height={300}
+                  width={300}
+                  className=" object-cover"
+                />
+
+                <p className="text-gray-600 p-2 text-sm">
+                  Tired of Waiting for Lower Mortgage Rates? 4 Steps That...
+                </p>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section6-3.jpg"
+                  alt="Home 1"
+                  height={300}
+                  width={300}
+                  className=" object-cover"
+                />
+
+                <p className="text-gray-600 p-2 text-sm">
+                  Tired of Waiting for Lower Mortgage Rates? 4 Steps That...
+                </p>
+              </Link>
+              <Link
+                href="/landing"
+                className="border rounded-lg overflow-hidden shadow-lg"
+              >
+                <Image
+                  src="/landing/section6-4.jpg"
+                  alt="Home 1"
+                  height={300}
+                  width={300}
+                  className=" object-cover"
+                />
+
+                <p className="text-gray-600 p-2 text-sm">
+                  Tired of Waiting for Lower Mortgage Rates? 4 Steps That...
+                </p>
+              </Link>
+            </div>
+          </section>
+        </main>
+
+        <footer className="bg-gray-800 text-white py-10">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-[80%] m-auto">
+            <div>
+              <h4 className="font-bold mb-2">Get Local Info</h4>
+              <p className="text-gray-400">
+                Does it have pet-friendly rentals? How are the schools? Get
+                important local information on the areas you're most interested
+                in.
+              </p>
+              <input
+                type="text"
+                className="mt-4 px-4 py-2 w-full rounded bg-gray-700 text-white"
+                placeholder="75069, McKinney, TX"
+              />
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">
+                Need a home loan? Get pre-approved
+              </h4>
+              <p className="text-gray-400">
+                Find a lender who can offer competitive mortgage rates and help
+                you with pre-approval.
+              </p>
+              <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                Get pre-approved now
+              </button>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">Learn About NAR</h4>
+              <ul className="text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    About NAR
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Agent vs. REALTOR®
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Find an Appraiser
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Commercial Services
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold mb-2">For REALTORS®</h4>
+              <ul className="text-gray-400">
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Create personalized social media content with RPR® Mobile
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    How to Properly Price a Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    RESPA Guidance Tips for REALTORS®
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
