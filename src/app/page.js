@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -183,36 +184,6 @@ export default function Home() {
   return (
     <div className="">
       <div className="">
-        <header className="bg-gray-800 text-white ">
-          <div className="container mx-auto flex justify-between items-center py-4 px-6 w-[80%] m-auto">
-            <h1 className="text-2xl font-bold">Real Estate Platform</h1>
-            <nav>
-              <ul className="flex space-x-7">
-                <li>
-                  <a href="/application" className="hover:text-yellow-300">
-                    Application
-                  </a>
-                </li>
-                <li>
-                  <a href="/feedback" className="hover:text-yellow-300">
-                    Feedback
-                  </a>
-                </li>
-                <li>
-                  <a href="/reservation" className="hover:text-yellow-300">
-                    Reservation
-                  </a>
-                </li>
-                <li>
-                  <a href="/register" className="hover:text-yellow-300">
-                    Register
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-
         <main className="bg-white">
           <section
             className="bg-cover bg-center h-[450px] flex items-center justify-center  m-auto flex-col"
@@ -229,7 +200,7 @@ export default function Home() {
                   placeholder="Address, School, City, Zip or Neighborhood
 "
                 />
-                <span className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-2xl font-bold absolute right-3 top-2 ">
+                <span className="w-10 cursor-pointer h-10 rounded-full bg-black text-white flex items-center justify-center text-2xl font-bold absolute right-3 top-2 ">
                   <IoSearchOutline />
                 </span>
               </div>
@@ -249,7 +220,7 @@ export default function Home() {
                     id="highlight"
                   >
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -270,7 +241,7 @@ export default function Home() {
                   </div>
                   <div className="card__back border rounded-lg overflow-hidden shadow-lg">
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -306,7 +277,7 @@ export default function Home() {
                     id="highlight"
                   >
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -327,7 +298,7 @@ export default function Home() {
                   </div>
                   <div className="card__back border rounded-lg overflow-hidden shadow-lg">
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -364,7 +335,7 @@ export default function Home() {
                     id="highlight"
                   >
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -385,7 +356,7 @@ export default function Home() {
                   </div>
                   <div className="card__back border rounded-lg overflow-hidden shadow-lg">
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -422,7 +393,7 @@ export default function Home() {
                     id="highlight"
                   >
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -443,7 +414,7 @@ export default function Home() {
                   </div>
                   <div className="card__back border rounded-lg overflow-hidden shadow-lg">
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -480,7 +451,7 @@ export default function Home() {
                     id="highlight"
                   >
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -501,7 +472,7 @@ export default function Home() {
                   </div>
                   <div className="card__back border rounded-lg overflow-hidden shadow-lg">
                     <Link
-                      href="/register"
+                      href="/reservation"
                       className="border rounded-lg overflow-hidden shadow-lg"
                     >
                       <Image
@@ -546,7 +517,7 @@ export default function Home() {
           <section className="bg-white py-10 w-[80%] m-auto">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
               <Link
-                href="/landing"
+                href="/add-property"
                 className="border rounded-lg overflow-hidden shadow-lg"
               >
                 <Image
@@ -562,7 +533,7 @@ export default function Home() {
                 </p>
               </Link>
               <Link
-                href="/landing"
+                href="/add-property"
                 className="border rounded-lg overflow-hidden shadow-lg"
               >
                 <Image
@@ -578,7 +549,7 @@ export default function Home() {
                 </p>
               </Link>
               <Link
-                href="/landing"
+                href="/add-property"
                 className="border rounded-lg overflow-hidden shadow-lg"
               >
                 <Image
@@ -594,7 +565,7 @@ export default function Home() {
                 </p>
               </Link>
               <Link
-                href="/landing"
+                href="/add-property"
                 className="border rounded-lg overflow-hidden shadow-lg"
               >
                 <Image
@@ -613,80 +584,7 @@ export default function Home() {
           </section>
         </main>
 
-        <footer className="bg-gray-800 text-white py-10">
-          <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-[90%] m-auto">
-            <div>
-              <h4 className="font-bold mb-2">Get Local Info</h4>
-              <p className="text-gray-400">
-                Does it have pet-friendly rentals? How are the schools? Get
-                important local information on the areas you're most interested
-                in.
-              </p>
-              <input
-                type="text"
-                className="mt-4 px-4 py-2 w-full rounded bg-gray-700 text-white"
-                placeholder="75069, McKinney, TX"
-              />
-            </div>
-            <div>
-              <h4 className="font-bold mb-2">
-                Need a home loan? Get pre-approved
-              </h4>
-              <p className="text-gray-400">
-                Find a lender who can offer competitive mortgage rates and help
-                you with pre-approval.
-              </p>
-              <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-                Get pre-approved now
-              </button>
-            </div>
-            <div>
-              <h4 className="font-bold mb-2">Learn About NAR</h4>
-              <ul className="text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    About NAR
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Agent vs. REALTOR®
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Find an Appraiser
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Commercial Services
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-bold mb-2">For REALTORS®</h4>
-              <ul className="text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    Create personalized social media content with RPR® Mobile
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    How to Properly Price a Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    RESPA Guidance Tips for REALTORS®
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </footer>
+       
       </div>
     </div>
   );

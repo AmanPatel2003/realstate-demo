@@ -35,7 +35,7 @@ const Application = ({ handleShowNotice, disabled, setDisabled }) => {
 
   return (
     <div className=" h-screen flex items-center justify-center">
-      <div className="max-w-md mx-auto p-8 border rounded-lg shadow-lg w-[50%] bg-white">
+      <div className="max-w-lg mx-auto p-8 border rounded-lg shadow-lg w-[50%] bg-white">
         <h2 className="text-2xl font-bold mb-6 text-center">
           Rental Application Form
         </h2>
