@@ -1,6 +1,6 @@
 "use client";
 import Loader from "@/components/matrimonialComp/Loader";
-import { morajNoticeCenter } from "concur-consent/morajNoticeCenter";
+
 import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
