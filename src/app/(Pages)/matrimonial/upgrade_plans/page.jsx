@@ -1,6 +1,7 @@
 "use client";
+import dynamic from "next/dynamic";
 import Loader from "@/components/matrimonialComp/Loader";
-import { morajNoticeCenter } from "concur-consent/morajNoticeCenter";
+
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
@@ -45,6 +46,11 @@ const paymentMethods = [
   { id: 4, name: "UPI" },
 ];
 
+const MorajNoticeCenter = dynamic(
+  () => import("concur-consent/morajNoticeCenter"),
+  { ssr: false }
+);
+
 const Page = () => {
   const router = useRouter();
   const [selectedPlan, setSelectedPlan] = useState(plans[0].id);
@@ -62,29 +68,11 @@ const Page = () => {
 
   const selectedPlanDetails = plans.find((plan) => plan.id === selectedPlan);
 
-  // const handleShowNotice = () => {
-  //   const agreementId = localStorage.getItem("agreement_id");
-
-  //   if (agreementId) {
-  //     localStorage.removeItem("agreement_id");
-  //     router.push('/dashboard');
-  //   } else {
-  //     morajNoticeCenter(
-  //       "66d95766cbd66ef0ea362853",
-  //       "a5b38b10e6316732",
-  //       "66d5b9c2cbd66ef0ea3627fd",
-  //       "mmEVIRTZ_UGUKJQ4Nfxgaw",
-  //       "gQGpM81A-LsTj6CA55IvUQz6Op_crRgjOm_b88Gs3EU"
-  //     );
-  //   }
-  // };
-
   const handleShowNotice = async () => {
     setIsLoading(true);
+
     if (typeof window !== "undefined") {
-      const { morajNoticeCenter } = await import(
-        "concur-consent/morajNoticeCenter"
-      );
+      const { morajNoticeCenter } = await MorajNoticeCenter;
 
       console.log("handleShowNotice function call");
       const agreementId = localStorage.getItem("agreement_id");
