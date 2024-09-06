@@ -88,12 +88,14 @@ const LoginRegisterModal = ({setShowModal}) => {
           </h3>
           <p className="text-lg font-medium text-gray-500 pt-4">
             Registered to NH Portal? Use your mobile number, as your medical
-            history won't sync to a new one.
+            history won&apos;t sync to a new one.
           </p>
 
           <div className="form-group mt-6">
             <div className="input-field flex flex-col">
-              <label htmlFor="email" className="mb-2">Email*</label>
+              <label htmlFor="email" className="mb-2">
+                Email*
+              </label>
               <input
                 autoComplete="off"
                 placeholder="Enter Email"
@@ -111,7 +113,9 @@ const LoginRegisterModal = ({setShowModal}) => {
 
           <div className="form-group mt-6">
             <div className="input-field">
-              <label htmlFor="mobile" className="">Mobile Number*</label>
+              <label htmlFor="mobile" className="">
+                Mobile Number*
+              </label>
               <span className="mobile-input flex items-center">
                 <span className="code">+91</span>
                 <input

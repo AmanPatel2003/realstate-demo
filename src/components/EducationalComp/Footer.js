@@ -3,6 +3,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="flex">
           <div className="w-1/2 pt-16">
             <div className="w-[25%] rounded-lg  py-2 ml-14">
-              <img
+              <Image
                 src="https://img.freepik.com/premium-vector/university-logo-vector-illustration_659631-5994.jpg?size=626&ext=jpg&ga=GA1.1.105260808.1701925756&semt=ais_hybrid"
                 alt="logo"
                 width={150}
@@ -57,8 +58,8 @@ const Footer = () => {
 
             <ul className="mt-3 space-y-2 font-light ">
               <li>About University</li>
-              <li>Chancellor's Message</li>
-              <li>Registrar's Message</li>
+              <li>Chancellor&apos;s Message</li>
+              <li>Registrar&apos;s Message</li>
               <li>Mission & Vision</li>
               <li>Approvals & Recognition</li>
               <li>University Management Team</li>

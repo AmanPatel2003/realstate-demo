@@ -89,7 +89,6 @@ export default function RegisterForm() {
     <div className="px-4 py-2 bg-black/70 rounded-lg shadow-md w-96 mt-8">
       <form onSubmit={handleSubmit}>
         <div className="mb-4 flex flex-col items-start">
-
           <label
             htmlFor="profileFor"
             className="mb-2 text-xs font-medium text-white text-start w-full"
@@ -192,7 +191,8 @@ export default function RegisterForm() {
           {/* Register for Free */}
         </button>
         <p className="mt-6 text-xs text-gray-400">
-          By clicking on 'Register Free,' you confirm that you accept the
+          By clicking on &apos;Register Free,&apos; you confirm that you accept
+          the
           <span className="text-pink-500"> Terms of Use</span> and
           <span className="text-pink-500"> Privacy Policy</span>.
         </p>
