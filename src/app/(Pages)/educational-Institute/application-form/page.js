@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [disabled, setDisabled] = useState(false);
   const [formData, setFormData] = useState({
@@ -106,4 +106,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
