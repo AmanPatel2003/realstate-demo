@@ -1,11 +1,9 @@
-
 import Sidebar from "@/components/EducationalComp/Sidebar";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      
       <div className="flex mt-28 justify-between bg-gray-50">
         <Sidebar className="w-[20%]" />
         <div className="w-[80%] bg-gray-50">

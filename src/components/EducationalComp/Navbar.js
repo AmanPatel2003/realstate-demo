@@ -13,13 +13,13 @@ const Navbar = () => {
     setDropdownOpen((prevState) => !prevState); // Toggle dropdown visibility
   };
 
-  const handleApplyClick = () => {
-    setIsModalOpen(true);
-  };
+  // const handleApplyClick = () => {
+  //   setIsModalOpen(true);
+  // };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
+  // const handleCloseModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   return (
     <div className=" w-[100vw]  bg-white fixed top-0 z-50">
@@ -34,7 +34,7 @@ const Navbar = () => {
       </div>
       <div className="flex shadow-xl">
         <div className="w-[30%]  flex items-center pl-14 h-20 ">
-          <Link href="/">
+          <Link href="/educational-Institute">
             <Image
               src="/image/logo.png"
               alt="logo"
@@ -52,19 +52,19 @@ const Navbar = () => {
             <li>Research</li>
             <li>Placement</li>
           </ul>
-          <Link href="/preference-center">
+          <Link href="/educational-Institute/preference-center">
             <button className="bg-[#071C55]  px-5  py-2 text-sm rounded-lg  text-white">
               PreferenceCenter
             </button>
           </Link>
-          <div>
+          {/* <div>
             <button
               onClick={handleApplyClick}
               className="bg-[#071C55] text-sm px-5  py-2 rounded-lg  text-white"
             >
               Apply Now
             </button>
-          </div>
+          </div> */}
           <div className="relative">
             <div className="relative  ">
               <div

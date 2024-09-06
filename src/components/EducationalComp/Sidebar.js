@@ -42,7 +42,7 @@ const Sidebar = ({ children }) => {
                 )}
               </button>
             </div>
-            <Link href="/dashboard">
+            <Link href="/educational-Institute/dashboard">
               <div className="flex items-center gap-3">
                 <span>
                   <RxDashboard size={20} />
@@ -52,7 +52,7 @@ const Sidebar = ({ children }) => {
                 </span>
               </div>
             </Link>
-            <Link href="/application-form">
+            <Link href="/educational-Institute/application-form">
               <div className="flex items-center gap-3">
                 <span>
                   <MdOutlineEventNote size={20} />
@@ -62,7 +62,7 @@ const Sidebar = ({ children }) => {
                 </span>
               </div>
             </Link>
-            <Link href="/exam-form">
+            <Link href="/educational-Institute/exam-form">
               <div className="flex items-center gap-3">
                 <span>
                   <FaWpforms size={20} />
@@ -72,7 +72,7 @@ const Sidebar = ({ children }) => {
                 </span>
               </div>
             </Link>
-            <Link href="/profile">
+            <Link href="/educational-Institute/profile">
               <div className="flex items-center gap-3">
                 <span>
                   <IoPersonOutline size={20} />
@@ -83,7 +83,7 @@ const Sidebar = ({ children }) => {
               </div>
             </Link>
 
-            <Link href="/payment">
+            <Link href="/educational-Institute/payment">
               <div className="flex items-center gap-3">
                 <span>
                   <MdPayments size={20} />
@@ -93,7 +93,7 @@ const Sidebar = ({ children }) => {
                 </span>
               </div>
             </Link>
-            <Link href="/">
+            <Link href="/educational-Institute">
               <div className="flex items-center gap-3 mt-[200px]">
                 <span>
                   <FiLogOut size={20} />

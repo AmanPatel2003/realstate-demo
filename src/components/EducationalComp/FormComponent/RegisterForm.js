@@ -3,27 +3,23 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Loader from "../Loader";
 
-const RegisterForm = ({ handleShowNotice, disabled }) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [state, setState] = useState("");
-  const [city, setCity] = useState("");
-  const [level, setLevel] = useState("");
-  const [stream, setStream] = useState("");
-  const [program, setProgram] = useState("");
-
+const RegisterForm = ({
+  handleShowNotice,
+  disabled,
+  formData, // Pass setDisabled1 here
+  setFormData,
+}) => {
   // Function to check if all required fields are filled
   const isFormValid = () => {
     return (
-      name.trim() !== "" &&
-      email.trim() !== "" &&
-      mobile.trim() !== "" &&
-      state.trim() !== "" &&
-      city.trim() !== "" &&
-      level.trim() !== "" &&
-      stream.trim() !== "" &&
-      program.trim() !== ""
+      formData.name.trim() !== "" &&
+      formData.email.trim() !== "" &&
+      formData.mobile.trim() !== "" &&
+      formData.state.trim() !== "" &&
+      formData.city.trim() !== "" &&
+      formData.level.trim() !== "" &&
+      formData.stream.trim() !== "" &&
+      formData.program.trim() !== ""
     );
   };
   const handleSubmit = () => {
@@ -47,15 +43,15 @@ const RegisterForm = ({ handleShowNotice, disabled }) => {
           type="text"
           placeholder="Enter Name*"
           className="w-full mb-3 rounded-md border outline-none border-gray-600 py-2 px-2"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
         <input
           type="email"
           placeholder="Enter Email Address*"
           className="w-full mb-3 rounded-md border mt-2 outline-none border-gray-600 py-2 px-2"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
 
         <div className="w-full mb-3 flex items-center mt-2">
@@ -67,10 +63,10 @@ const RegisterForm = ({ handleShowNotice, disabled }) => {
             name="phoneNumber"
             className="w-full bg-gray-50 border outline-none text-gray-900 text-sm border-gray-300 rounded-r-md py-2 px-2"
             placeholder="Enter Mobile Number*"
-            value={mobile}
+            value={formData.mobile}
             onChange={(e) => {
               const numericValue = e.target.value.replace(/\D/g, ""); // Removes non-numeric characters
-              setMobile(numericValue);
+              setFormData({ ...formData, mobile: numericValue });
             }}
             maxLength={10}
           />
@@ -81,35 +77,37 @@ const RegisterForm = ({ handleShowNotice, disabled }) => {
             type="text"
             placeholder="Enter State*"
             className="w-1/2 mb-3 rounded-md border outline-none border-gray-600 py-2 px-2"
-            value={state}
-            onChange={(e) => setState(e.target.value)}
+            value={formData.state}
+            onChange={(e) =>
+              setFormData({ ...formData, state: e.target.value })
+            }
           />
           <input
             type="text"
             placeholder="Enter City*"
             className="w-1/2 mb-3 rounded-md border outline-none border-gray-600 py-2 px-2"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
+            value={formData.city}
+            onChange={(e) => setFormData({ ...formData, city: e.target.value })}
           />
         </div>
 
         <select
           className="w-full mb-3 mt-2 rounded-md border outline-none border-gray-600 py-2 px-2"
           placeholder=" Select Level Applying For*"
-          value={level}
-          onChange={(e) => setLevel(e.target.value)}
+          value={formData.level}
+          onChange={(e) => setFormData({ ...formData, level: e.target.value })}
         >
           <option className="text-gray-500" value="">
             Select Level Applying For*
           </option>
-          <option value="undergraduate">Undergraduate</option>
+          <option value="undergraduate">Graduate</option>
           <option value="postgraduate">Post Graduate</option>
         </select>
 
         <select
           className="w-full mb-3 mt-2 rounded-md border outline-none border-gray-600 py-2 px-2"
-          value={stream}
-          onChange={(e) => setStream(e.target.value)}
+          value={formData.stream}
+          onChange={(e) => setFormData({ ...formData, stream: e.target.value })}
         >
           <option className="text-gray-500" value="">
             Select Stream*
@@ -123,13 +121,15 @@ const RegisterForm = ({ handleShowNotice, disabled }) => {
 
         <select
           className="w-full mb-3 mt-2 rounded-md border outline-none border-gray-600 py-2 px-2"
-          value={program}
-          onChange={(e) => setProgram(e.target.value)}
+          value={formData.program}
+          onChange={(e) =>
+            setFormData({ ...formData, program: e.target.value })
+          }
         >
           <option className="text-gray-500" value="">
             Select Course Name*
           </option>
-          {level === "postgraduate" ? (
+          {formData.level === "postgraduate" ? (
             <>
               <option value="MBA">MBA</option>
               <option value="MCA">MCA</option>

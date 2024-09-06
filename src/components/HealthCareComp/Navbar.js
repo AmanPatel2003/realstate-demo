@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="bg-white border-gray-200 shadow-sm">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a
-            href="/"
+            href="/health_care"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
@@ -182,11 +182,11 @@ const Navbar = () => {
           <div className="bg-white p-5 max-w-4xl relative">
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-2 text-2xl right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-2 text-3xl  right-3 text-gray-500 hover:text-gray-700"
             >
               &times;
             </button>
-            <LoginRegisterModal />
+            <LoginRegisterModal setShowModal={setShowModal} />
           </div>
         </div>
       )}
