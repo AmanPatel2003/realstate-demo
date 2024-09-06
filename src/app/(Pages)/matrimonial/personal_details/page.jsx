@@ -1,16 +1,15 @@
 "use client";
-import Loader from '@/components/matrimonialComp/Loader';
-import { morajNoticeCenter } from 'concur-consent/morajNoticeCenter';
-import { useRouter } from 'next/navigation';
-import React, { useState, useEffect } from 'react';
-
+import Loader from "@/components/matrimonialComp/Loader";
+import { morajNoticeCenter } from "concur-consent/morajNoticeCenter";
+import { useRouter } from "next/navigation";
+import React, { useState, useEffect } from "react";
 
 const Page = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const [currentStep, setCurrentStep] = useState(() => {
-    const savedStep = localStorage.getItem('currentStep');
+    const savedStep = localStorage.getItem("currentStep");
     return savedStep !== null ? JSON.parse(savedStep) : 0;
   });
 
@@ -30,7 +29,7 @@ const Page = () => {
     fatherOccupation: "",
     motherOccupation: "",
     contactAddress: "",
-    aboutFamily: ""
+    aboutFamily: "",
   });
 
   const [errors, setErrors] = useState({
@@ -45,7 +44,7 @@ const Page = () => {
     employedIn: "",
     income: "",
     familyType: "",
-    contactAddress: ""
+    contactAddress: "",
   });
 
   const steps = ["Profile Details", "Career Details", "Lifestyle & Family"];
@@ -54,15 +53,33 @@ const Page = () => {
     motherTongue: ["Hindi", "Bengali", "Telugu", "Marathi", "Tamil"],
     religion: ["Hindu", "Muslim", "Christian", "Sikh", "Other"],
     maritalStatus: ["Single", "Married", "Divorced", "Widowed"],
-    height: ["4'0\" - 4'5\"", "4'6\" - 5'0\"", "5'1\" - 5'5\"", "5'6\" - 6'0\"", "6'1\" and above"],
+    height: [
+      "4'0\" - 4'5\"",
+      "4'6\" - 5'0\"",
+      "5'1\" - 5'5\"",
+      "5'6\" - 6'0\"",
+      "6'1\" and above",
+    ],
     country: ["India", "USA", "Canada", "UK", "Australia"],
     degree: ["High School", "Bachelor's", "Master's", "PhD"],
-    employedIn: ["Private Sector", "Government", "Self-Employed", "Student", "Other"],
-    income: ["< 3 Lakh", "3 - 5 Lakh", "5 - 10 Lakh", "10 - 20 Lakh", "20 Lakh and above"]
+    employedIn: [
+      "Private Sector",
+      "Government",
+      "Self-Employed",
+      "Student",
+      "Other",
+    ],
+    income: [
+      "< 3 Lakh",
+      "3 - 5 Lakh",
+      "5 - 10 Lakh",
+      "10 - 20 Lakh",
+      "20 Lakh and above",
+    ],
   };
 
   useEffect(() => {
-    localStorage.setItem('currentStep', JSON.stringify(currentStep));
+    localStorage.setItem("currentStep", JSON.stringify(currentStep));
   }, [currentStep]);
 
   const handleNext = () => {
@@ -167,7 +184,7 @@ const Page = () => {
         }
       }
     }
-    localStorage.removeItem('currentStep');
+    localStorage.removeItem("currentStep");
   };
 
   return (
@@ -177,10 +194,11 @@ const Page = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`w-full p-2 border-b-4 ${currentStep === index
-              ? "border-[#D9475C] text-[#D9475C]"
-              : "border-gray-300 text-gray-500"
-              } text-center`}
+            className={`w-full p-2 border-b-4 ${
+              currentStep === index
+                ? "border-[#D9475C] text-[#D9475C]"
+                : "border-gray-300 text-gray-500"
+            } text-center`}
           >
             {step}
           </div>
@@ -197,14 +215,17 @@ const Page = () => {
               <input
                 type="text"
                 value={formData.name}
-                placeholder='Enter Full Name'
+                placeholder="Enter Full Name"
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.name ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.name ? "border-red-500" : ""
+                }`}
               />
-              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Date of Birth *</label>
@@ -214,78 +235,97 @@ const Page = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, dob: e.target.value })
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.dob ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.dob ? "border-red-500" : ""
+                }`}
               />
-              {errors.dob && <p className="text-red-500 text-sm">{errors.dob}</p>}
+              {errors.dob && (
+                <p className="text-red-500 text-sm">{errors.dob}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Mother Tongue *</label>
               <select
                 value={formData.motherTongue}
                 onChange={(e) =>
-                  handleSelectChange('motherTongue', e.target.value)
+                  handleSelectChange("motherTongue", e.target.value)
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.motherTongue ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.motherTongue ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.motherTongue.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.motherTongue.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.motherTongue && <p className="text-red-500 text-sm">{errors.motherTongue}</p>}
+              {errors.motherTongue && (
+                <p className="text-red-500 text-sm">{errors.motherTongue}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Religion *</label>
               <select
                 value={formData.religion}
-                onChange={(e) =>
-                  handleSelectChange('religion', e.target.value)
-                }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.religion ? "border-red-500" : ""
-                  }`}
+                onChange={(e) => handleSelectChange("religion", e.target.value)}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.religion ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.religion.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.religion.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.religion && <p className="text-red-500 text-sm">{errors.religion}</p>}
+              {errors.religion && (
+                <p className="text-red-500 text-sm">{errors.religion}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Marital Status *</label>
               <select
                 value={formData.maritalStatus}
                 onChange={(e) =>
-                  handleSelectChange('maritalStatus', e.target.value)
+                  handleSelectChange("maritalStatus", e.target.value)
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.maritalStatus ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.maritalStatus ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.maritalStatus.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.maritalStatus.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.maritalStatus && <p className="text-red-500 text-sm">{errors.maritalStatus}</p>}
+              {errors.maritalStatus && (
+                <p className="text-red-500 text-sm">{errors.maritalStatus}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Height *</label>
               <select
                 value={formData.height}
-                onChange={(e) =>
-                  handleSelectChange('height', e.target.value)
-                }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.height ? "border-red-500" : ""
-                  }`}
+                onChange={(e) => handleSelectChange("height", e.target.value)}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.height ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.height.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.height.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.height && <p className="text-red-500 text-sm">{errors.height}</p>}
+              {errors.height && (
+                <p className="text-red-500 text-sm">{errors.height}</p>
+              )}
             </div>
           </div>
         </div>
@@ -299,69 +339,83 @@ const Page = () => {
               <label className="block mb-1">Country *</label>
               <select
                 value={formData.country}
-                onChange={(e) =>
-                  handleSelectChange('country', e.target.value)
-                }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.country ? "border-red-500" : ""
-                  }`}
+                onChange={(e) => handleSelectChange("country", e.target.value)}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.country ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.country.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.country.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.country && <p className="text-red-500 text-sm">{errors.country}</p>}
+              {errors.country && (
+                <p className="text-red-500 text-sm">{errors.country}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Highest Degree *</label>
               <select
                 value={formData.degree}
-                onChange={(e) =>
-                  handleSelectChange('degree', e.target.value)
-                }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.degree ? "border-red-500" : ""
-                  }`}
+                onChange={(e) => handleSelectChange("degree", e.target.value)}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.degree ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.degree.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.degree.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.degree && <p className="text-red-500 text-sm">{errors.degree}</p>}
+              {errors.degree && (
+                <p className="text-red-500 text-sm">{errors.degree}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Employed In *</label>
               <select
                 value={formData.employedIn}
                 onChange={(e) =>
-                  handleSelectChange('employedIn', e.target.value)
+                  handleSelectChange("employedIn", e.target.value)
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.employedIn ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.employedIn ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.employedIn.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.employedIn.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.employedIn && <p className="text-red-500 text-sm">{errors.employedIn}</p>}
+              {errors.employedIn && (
+                <p className="text-red-500 text-sm">{errors.employedIn}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Annual Income *</label>
               <select
                 value={formData.income}
-                onChange={(e) =>
-                  handleSelectChange('income', e.target.value)
-                }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.income ? "border-red-500" : ""
-                  }`}
+                onChange={(e) => handleSelectChange("income", e.target.value)}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.income ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select</option>
-                {options.income.map(option => (
-                  <option key={option} value={option}>{option}</option>
+                {options.income.map((option) => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
                 ))}
               </select>
-              {errors.income && <p className="text-red-500 text-sm">{errors.income}</p>}
+              {errors.income && (
+                <p className="text-red-500 text-sm">{errors.income}</p>
+              )}
             </div>
           </div>
         </div>
@@ -378,8 +432,9 @@ const Page = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, familyType: e.target.value })
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.familyType ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.familyType ? "border-red-500" : ""
+                }`}
               >
                 <option value="">Select Family Type</option>
                 <option value="Nuclear">Nuclear</option>
@@ -387,21 +442,26 @@ const Page = () => {
                 <option value="Extended">Extended</option>
                 <option value="Single Parent">Single Parent</option>
               </select>
-              {errors.familyType && <p className="text-red-500 text-sm">{errors.familyType}</p>}
+              {errors.familyType && (
+                <p className="text-red-500 text-sm">{errors.familyType}</p>
+              )}
             </div>
             <div>
               <label className="block mb-1">Contact Address </label>
               <input
-                placeholder='Enter Address'
+                placeholder="Enter Address"
                 type="text"
                 value={formData.contactAddress}
                 onChange={(e) =>
                   setFormData({ ...formData, contactAddress: e.target.value })
                 }
-                className={`w-full p-2 border border-gray-300 rounded ${errors.contactAddress ? "border-red-500" : ""
-                  }`}
+                className={`w-full p-2 border border-gray-300 rounded ${
+                  errors.contactAddress ? "border-red-500" : ""
+                }`}
               />
-              {errors.contactAddress && <p className="text-red-500 text-sm">{errors.contactAddress}</p>}
+              {errors.contactAddress && (
+                <p className="text-red-500 text-sm">{errors.contactAddress}</p>
+              )}
             </div>
           </div>
         </div>
@@ -428,10 +488,9 @@ const Page = () => {
           <button
             className="px-4 py-2 bg-[#D9475C] text-white rounded"
             onClick={handleShowNotice}
-          // onClick={() => router.push('/dashboard')}
+            // onClick={() => router.push('/dashboard')}
           >
             {isLoading ? <Loader /> : "Submit"}
-
           </button>
         )}
       </div>

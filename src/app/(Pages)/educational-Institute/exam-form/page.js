@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Sidebar from "@/components/EducationalComp/Sidebar";
 import ExamForm from "@/components/EducationalComp/FormComponent/ExamForm";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const [disabled, setDisabled] = useState(false);
   const [formData, setFormData] = useState({
@@ -88,4 +88,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

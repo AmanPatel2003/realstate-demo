@@ -1,13 +1,12 @@
-import UserProfile from '@/components/matrimonialComp/UserProfile'
-import React from 'react'
-
+import UserProfile from "@/components/matrimonialComp/UserProfile";
+import React from "react";
 
 const Page = () => {
   return (
     <div>
-      <UserProfile/>
+      <UserProfile />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
