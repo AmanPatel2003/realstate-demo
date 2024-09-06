@@ -33,8 +33,31 @@ const Application = ({ handleShowNotice, disabled, setDisabled }) => {
     handleShowNotice();
   };
 
+    const updateFormData = () => {
+      setFormData({
+        fullName: "Gaurav Mehta",
+        email: "demo@perfios.com",
+        phone: "8770467824",
+        dob: "1947-02-28", // Updated 'dob' field
+        address: "Global Fintech Fest, Perfios Booth",
+        employment: "Software Engineer", // Add value if needed
+        income: "100000", // Add value if needed
+        rentalHistory: "None", // Add value if needed
+        references: "John Doe", // Add value if needed
+        moveInDate: "2024-10-01", // Add value if needed
+        documents: null, // Add value if needed
+      });
+    };
+
+
   return (
     <div className=" h-screen flex items-center justify-center">
+      <button
+        onClick={updateFormData}
+        className=" absolute top-24 right-10 text-red-500 border border-red-500 focus:ring-4 hover:bg-red-500 hover:text-white font-medium rounded-md text-base w-full sm:w-auto px-7 py-3 text-center"
+      >
+        Fill Data
+      </button>
       <div className="max-w-lg mx-auto p-8 border rounded-lg shadow-lg w-[50%] bg-white">
         <h2 className="text-2xl font-bold mb-6 text-center">
           Rental Application Form

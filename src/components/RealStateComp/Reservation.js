@@ -26,8 +26,27 @@ const Reservation = ({ handleShowNotice, disabled, setDisabled }) => {
     handleShowNotice();
   };
 
+  const updateFormData = () => {
+    setFormData({
+      fullName: "Gaurav Mehta",
+      email: "demo@perfios.com",
+      phoneNumber: "8770467824",
+      propertyAddress: "123 Main Street, Mumbai",
+      preferredDateTime: "2024-09-15", // Example in 'YYYY-MM-DDTHH:MM' format
+      specialRequests: "Need parking space",
+    });
+  };
+
+
   return (
     <div className=" h-screen flex items-center justify-center my-4">
+      <button
+        onClick={updateFormData}
+        className=" absolute top-24 right-10 text-red-500 border border-red-500 focus:ring-4 hover:bg-red-500 hover:text-white font-medium rounded-md text-base w-full sm:w-auto px-7 py-3 text-center"
+      >
+        Fill Data
+      </button>
+
       <div className="max-w-lg mx-auto p-8 border rounded-lg shadow-lg w-[50%] bg-white">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
           Property Viewing Booking Form

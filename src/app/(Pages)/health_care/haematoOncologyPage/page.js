@@ -2,11 +2,34 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const page = () => {
   const router = useRouter();
-  const [disabled, setDisabled] = useState(false);
+   const [formData, setFormData] = useState({
+     fullName: "",
+     phoneNumber: "",
+     email: "",
+   });
+   const [disabled, setDisabled] = useState(true);
+
+   // Function to update form data (prefill example)
+   const updateFormData = () => {
+     setFormData({
+       fullName: "Gaurav Mehta",
+       phoneNumber: "8770467824",
+       email: "demo@perfios.com",
+     });
+   };
+
+   // Enable/Disable submit button based on form completeness
+   useEffect(() => {
+     const isFormComplete =
+       formData.fullName !== "" &&
+       formData.phoneNumber !== "" &&
+       formData.email !== "";
+     setDisabled(!isFormComplete);
+   }, [formData]);
 
   const handleShowNotice = async () => {
     setDisabled(true);
@@ -19,7 +42,7 @@ const page = () => {
       const agreementId = localStorage.getItem("agreement_id");
       if (agreementId) {
         // If agreement_id exists, route to the landing page
-        router.push("/"); // Replace with your actual landing page route
+        router.push("/health_care"); // Replace with your actual landing page route
         localStorage.removeItem("agreement_id");
       } else {
         // If agreement_id doesn't exist, show the notice center
@@ -135,17 +158,18 @@ const page = () => {
               Reach out to us
             </h2>
             <div className="flex w-full px-4 justify-center gap-4  ">
+              <button
+                onClick={updateFormData}
+                className="btn bg-blue-300 mr-2 w-1/2 py-2 px-2 text-gray-700 font-bold text-center rounded-md text-lg"
+                href="/hospitals"
+              >
+                Fill Data
+              </button>
               <a
-                className=" bg-blue-200 w-1/2 py-4 px-4 text-gray-700 font-bold text-center rounded-md text-lg"
+                className=" bg-blue-200 w-1/2 py-2 px-2 text-gray-700 font-bold text-center rounded-md text-lg"
                 href=""
               >
                 Find a Doctor
-              </a>
-              <a
-                className="btn bg-blue-200 mr-2 w-1/2 py-4 px-4 text-gray-700 font-bold text-center rounded-md text-lg"
-                href="/hospitals"
-              >
-                Hospital
               </a>
             </div>
             <div className="mt-6">
@@ -158,6 +182,10 @@ const page = () => {
                   placeholder="Enter Here"
                   id="fullname"
                   name="fullname"
+                  value={formData.fullName}
+                  onChange={(e) =>
+                    setFormData({ ...formData, fullName: e.target.value })
+                  }
                   className="w-full border border-gray-300 p-3 rounded-md"
                 />
               </div>
@@ -173,7 +201,11 @@ const page = () => {
                     id="mobile"
                     maxLength="10"
                     name="mobile"
-                    className="w-full  p-3 rounded-r-md"
+                    value={formData.phoneNumber}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phoneNumber: e.target.value })
+                    }
+                    className="w-full p-3 rounded-r-md"
                   />
                 </div>
               </div>
@@ -186,6 +218,10 @@ const page = () => {
                   placeholder="Enter Here"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   className="w-full border border-gray-300 p-3 rounded-md"
                 />
               </div>
@@ -193,7 +229,9 @@ const page = () => {
                 <button
                   disabled={disabled}
                   onClick={handleShowNotice}
-                  className="btn bg-blue-600 text-white py-3 px-6 rounded-md"
+                  className={`btn ${
+                    disabled ? "bg-gray-400" : "bg-blue-600"
+                  } text-white py-3 px-6 rounded-md`}
                 >
                   Submit
                 </button>

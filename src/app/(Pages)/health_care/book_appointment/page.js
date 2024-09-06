@@ -1,12 +1,58 @@
 "use client";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Page = () => {
   const router = useRouter();
-  const [disabled, setDisabled] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phoneNumber: "",
+    email: "",
+    city: "",
+    hospital: "",
+    package: "",
+    preferredTime: "",
+    date: "",
+    query: "",
+    tncCheck: false,
+  });
+  const [disabled, setDisabled] = useState(true);
+
+  // Function to update form data (prefill example)
+  const updateFormData = () => {
+    setFormData({
+      fullName: "Gaurav Mehta",
+      phoneNumber: "8770467824",
+      email: "demo@perfios.com",
+      city: "Bangalore",
+      hospital: "hospital1",
+      package: "package1",
+      preferredTime: "morning",
+      date: "01/01/2024",
+      query: "Sample query",
+      tncCheck: true,
+    });
+  };
+
+  // Enable/Disable submit button based on form completeness
+  useEffect(() => {
+    const isFormComplete =
+      formData.fullName !== "" &&
+      formData.phoneNumber !== "" &&
+      formData.email !== "" &&
+      formData.city !== "" &&
+      formData.hospital !== "" &&
+      formData.package !== "" &&
+      formData.preferredTime !== "" &&
+      formData.date !== "" &&
+      formData.tncCheck;
+
+    setDisabled(!isFormComplete);
+  }, [formData]);
 
   const handleShowNotice = async () => {
+    if (disabled) return;
+
     setDisabled(true);
     if (typeof window !== "undefined") {
       const { morajNoticeCenter } = await import(
@@ -16,11 +62,9 @@ const Page = () => {
       console.log("handleShowNotice function call");
       const agreementId = localStorage.getItem("agreement_id");
       if (agreementId) {
-        // If agreement_id exists, route to the landing page
-        router.push("/"); // Replace with your actual landing page route
+        router.push("/health_care"); // Replace with your actual landing page route
         localStorage.removeItem("agreement_id");
       } else {
-        // If agreement_id doesn't exist, show the notice center
         morajNoticeCenter(
           "66d5aac5cbd66ef0ea3627eb",
           "81771b3f7229940d",
@@ -43,6 +87,12 @@ const Page = () => {
           "url(https://www.narayanahealth.org/assets/images/health-check-package-background.webp)",
       }}
     >
+      <button
+        onClick={updateFormData}
+        className="absolute top-20 bg-blue-600  right-10 text-white border border-white focus:ring-4 hover:bg-red-500 hover:text-white font-medium rounded-md text-base w-full sm:w-auto px-7 py-3 text-center"
+      >
+        Fill Data
+      </button>
       <div className="flex items-center pt-5 pb-5 overflow-x-hidden">
         <div className="flex items-center mr-1.5">
           <a
@@ -75,6 +125,10 @@ const Page = () => {
                 className="w-full outline-none border p-2"
                 id="name"
                 name="name"
+                value={formData.fullName}
+                onChange={(e) =>
+                  setFormData({ ...formData, fullName: e.target.value })
+                }
               />
             </div>
           </div>
@@ -90,6 +144,10 @@ const Page = () => {
                   id="mobile"
                   maxLength="10"
                   name="mobile"
+                  value={formData.phoneNumber}
+                  onChange={(e) =>
+                    setFormData({ ...formData, phoneNumber: e.target.value })
+                  }
                 />
               </span>
             </div>
@@ -103,6 +161,10 @@ const Page = () => {
                 className="w-full outline-none border p-2"
                 id="email"
                 name="email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
               />
             </div>
           </div>
@@ -114,10 +176,15 @@ const Page = () => {
               <select
                 id="city"
                 name="city"
-                // value={selectedCity}
-                // onChange={handleCityChange}
-                className="block appearance-none w-full bg-white border-b text-gray-400  border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none"
+                value={formData.city}
+                onChange={(e) =>
+                  setFormData({ ...formData, city: e.target.value })
+                }
+                className="block appearance-none w-full bg-white border-b   border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none"
               >
+                <option value="" disabled>
+                  Select location
+                </option>
                 <option value="Bangalore">Bangalore</option>
                 <option value="Mumbai">Mumbai</option>
                 <option value="Delhi">Delhi</option>
@@ -131,8 +198,14 @@ const Page = () => {
               Hospitals & Clinics*
             </span>
             <div className="select-container flex justify-between cursor-pointer border-gray-300">
-              <select className="block appearance-none w-full bg-white border-b text-gray-400  border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none">
-                <option value="" disabled selected>
+              <select
+                value={formData.hospital}
+                onChange={(e) =>
+                  setFormData({ ...formData, hospital: e.target.value })
+                }
+                className="block appearance-none w-full bg-white border-b   border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none"
+              >
+                <option value="" disabled>
                   Select hospital
                 </option>
                 <option value="hospital1">Hospital 1</option>
@@ -145,8 +218,14 @@ const Page = () => {
           <div className="form-group mt-5 w-full pb-1.5">
             <span className="text-gray-700 font-bold text-lg">Packages*</span>
             <div className="select-container flex justify-between cursor-pointer border-gray-300">
-              <select className="block appearance-none w-full bg-white border-b text-gray-400  border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none">
-                <option value="" disabled selected>
+              <select
+                value={formData.package}
+                onChange={(e) =>
+                  setFormData({ ...formData, package: e.target.value })
+                }
+                className="block appearance-none w-full bg-white border-b  border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none"
+              >
+                <option value="" disabled>
                   Select packages
                 </option>
                 <option value="package1">Package 1</option>
@@ -162,9 +241,15 @@ const Page = () => {
                 Preferred Time*
               </span>
               <div className="select-container flex justify-between cursor-pointer pt-2.5">
-                <select className="block appearance-none w-full bg-white border-b text-gray-400  border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none">
-                  <option value="" disabled selected>
-                    Select
+                <select
+                  value={formData.preferredTime}
+                  onChange={(e) =>
+                    setFormData({ ...formData, preferredTime: e.target.value })
+                  }
+                  className="block appearance-none w-full bg-white border-b   border-gray-300 py-2.5 px-4 pr-8 leading-tight  outline-none"
+                >
+                  <option value="" disabled>
+                    Select preferred time
                   </option>
                   <option value="morning">Morning</option>
                   <option value="afternoon">Afternoon</option>
@@ -172,55 +257,53 @@ const Page = () => {
                 </select>
               </div>
             </div>
-
-            <div className="form-group pb-1.5 w-1/2 pl-2.5">
+            <div className="form-group pb-1.5 w-1/2">
               <span className="text-gray-700 font-bold text-lg">Date*</span>
-              <div className="relative">
-                <label htmlFor="date" className="input-field cursor-pointer">
-                  <input
-                    id="date"
-                    inputMode="none"
-                    className="w-full outline-none border p-2"
-                    placeholder="dd/mm/yyyy"
-                    type="text"
-                    name="date"
-                  />
-                  <i className="absolute top-1/2 right-2.5 transform -translate-y-1/2 nh-book text-blue-600"></i>
-                </label>
-              </div>
+              <input
+                autoComplete="off"
+                type="text"
+                placeholder="dd/mm/yyyy"
+                className="w-full outline-none border p-2"
+                name="date"
+                value={formData.date}
+                onChange={(e) =>
+                  setFormData({ ...formData, date: e.target.value })
+                }
+              />
             </div>
           </div>
           <div className="form-group mt-6 w-full">
             <div className="input-field">
-              <label htmlFor="query">Your Query</label>
+              <label htmlFor="query">Query</label>
               <textarea
+                autoComplete="off"
                 placeholder="Enter your query"
-                className="w-full outline-none border p-1"
-                name="query"
+                className="w-full outline-none border p-2"
                 id="query"
-              ></textarea>
+                name="query"
+                rows={4}
+                value={formData.query}
+                onChange={(e) =>
+                  setFormData({ ...formData, query: e.target.value })
+                }
+              />
             </div>
           </div>
-          <div className="mt-6 w-full flex items-center ">
-            <span className="check-radio flex items-center">
-              <span className="check-radio-wrap flex items-center cursor-pointer">
-                <input
-                  id="tnc_check"
-                  className="checkbox"
-                  type="checkbox"
-                  name="tnc_check"
-                />
-                <label
-                  className="text-lg cursor-pointer flex items-center text-gray-500 ml-2"
-                  htmlFor="tnc_check"
-                >
-                  <span className="block"></span>
-                </label>
-              </span>
-            </span>
-            <span className="text-gray-500 font-medium text-base ml-2">
-              By clicking Submit, you agree to the Terms & Conditions and
-              Privacy Policy of Narayana Health’s website.
+
+          <div className="form-group mt-6 w-full flex items-center">
+            <input
+              type="checkbox"
+              checked={formData.tncCheck}
+              onChange={(e) =>
+                setFormData({ ...formData, tncCheck: e.target.checked })
+              }
+              className="form-checkbox"
+            />
+            <span className="ml-2">
+              I agree to the{" "}
+              <a href="#" className="text-blue-500">
+                terms and conditions
+              </a>
             </span>
           </div>
           <div className="mt-10 text-left">

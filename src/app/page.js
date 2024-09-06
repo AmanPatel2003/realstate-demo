@@ -39,6 +39,7 @@ export default function Home() {
                   alt="banking img"
                   height={240}
                   width={240}
+                  className="rounded-full shadow-2xl"
                 />
               </Link>
               <h2 className="text-xl font-semibold mt-6">University</h2>

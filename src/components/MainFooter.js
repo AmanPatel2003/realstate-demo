@@ -17,6 +17,7 @@ const MainFooter = () => {
     pathname === "/educational-Institute/payment" ||
     pathname === "/educational-Institute/preference-center" ||
     pathname === "/educational-Institute/profile" ||
+    pathname === "/real_state/preference-center" ||
     pathname === "/educational-Institute/dashboard"
   ) {
     return null; // Don't render the footer
