@@ -1,593 +1,520 @@
 version: '1.0'
-organisation_id: 66d3fcb8cbd66ef0ea3627c0
+organisation_id: 66d56a10cbd66ef0ea3627cc
 applications:
-  - application_id: ce151ce044ebbece
-    type: web app
-    name: Realstates demo
-    stage: development
-    application_user: india
-    collection_points_data:
-      - cp_id: 66d40359cbd66ef0ea3627c2
-        cp_name: Register
-        cp_status: active
-        cp_url: demo.api.com/66d40359cbd66ef0ea3627c2
-        data_elements:
-          - data_element: Full name
-            data_element_collection_status: active
-            data_element_title: Full name
-            data_element_description: For know  you
-            data_owner: []
-            legal_basis: false
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: f14900d80a26ddfb
-                purpose_description: For your identification
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c2
-              - purpose_id: 406576ba3bc60125
-                purpose_description: For know your name
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c3
-              - purpose_id: 4af66f383ab9fc19
-                purpose_description: For add you in my collection
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c4
-            translated_data_element_id: 66d4071bcbd66ef0ea3627c7
-          - data_element: Email Address
-            data_element_collection_status: active
-            data_element_title: Email address
-            data_element_description: For unique id
-            data_owner: []
-            legal_basis: false
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: a933b66c36f0fe7d
-                purpose_description: Unique identifire
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c5
-              - purpose_id: 4b0055eefdfc6cc4
-                purpose_description: >-
-                  The email id allows the platform to verify  the user's
-                  identity by sending a confirmation link, ensuring that the
-                  registered account belong to  a valid user.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c6
-              - purpose_id: 582b9cb140d5f6fe
-                purpose_description: >-
-                  In case the user forget their password ,the email id  provides
-                  a means to securely reset it.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c7
-            translated_data_element_id: 66d4071bcbd66ef0ea3627c8
-          - data_element: Phone number
-            data_element_collection_status: active
-            data_element_title: Phone number
-            data_element_description: Provide updated information
-            data_owner: []
-            legal_basis: false
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 7fba02dabc0d599b
-                purpose_description: For account verification
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c8
-              - purpose_id: dea8242a846034f2
-                purpose_description: Two-factor authentication
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2c9
-              - purpose_id: d860a80d1ba62400
-                purpose_description: Password recovery and important  information
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-                translated_purpose_id: 66d4071bd62ddc52033be2ca
-            translated_data_element_id: 66d4071bcbd66ef0ea3627c9
-      - cp_id: 66d56e1dcbd66ef0ea3627cd
-        cp_name: Rental form
-        cp_status: active
-        cp_url: demo.api.com/66d56e1dcbd66ef0ea3627cd
-        data_elements:
-          - data_element: Full Name
-            data_element_collection_status: active
-            data_element_title: Name
-            data_element_description: To get user name
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 33b641b2f7a44473
-                purpose_description: ' your name allows us to address you directly, creating a more personalized and engaging conversation.'
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: dad6f9d5db89e8f0
-                purpose_description: >-
-                  Knowing your name helps us maintain a professional tone in our
-                  responses, ensuring a respectful and appropriate exchange.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 5723f2040499dea0
-                purpose_description: >-
-                  By having your name, we can better cater to your specific
-                  needs and preferences, making our communication more relevant
-                  to you.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 9a8089d4e6a6c011
-                purpose_description: >-
-                  Your name helps us efficiently track and follow up on your
-                  inquiries, ensuring we provide timely and accurate responses.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-          - data_element: 'Email '
-            data_element_collection_status: active
-            data_element_title: Email address
-            data_element_description: To get user email address
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 003e56fb2b056975
-                purpose_description: >-
-                  Your email allows us to reach you directly, ensuring prompt
-                  and efficient communication
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 4f7d8a3ae68d2ca6
-                purpose_description: >-
-                  Providing your email ensures you receive confirmations and
-                  follow-ups on your inquiries without delay
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: ddbf93531f7e6a27
-                purpose_description: >-
-                  With your email, we can send you tailored updates and
-                  information relevant to your interests and needs.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 64420d2bf69e731b
-                purpose_description: >-
-                  Your email helps us maintain a secure and private line of
-                  communication, protecting your personal information.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-          - data_element: Phone Number
-            data_element_collection_status: active
-            data_element_title: Number
-            data_element_description: To collect user phone number
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 2f9d6fe8e244d39d
-                purpose_description: ' your mobile number allows us to reach you quickly via call or sms for urgent or time-sensitive matters'
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: e74bb5a62a46c0a9
-                purpose_description: >-
-                  We can send you timely reminders and notifications for
-                  scheduled appointments or services
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 486977deeb289dc5
-                purpose_description: >-
-                  Having your mobile number enables us to provide direct and
-                  personalized assistance, ensuring any issues are resolved
-                  promptly.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-          - data_element: Home address
-            data_element_collection_status: active
-            data_element_title: Address
-            data_element_description: To collect home address
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 453eac1774c0fa91
-                purpose_description: >-
-                  Your address ensures that any services or products are
-                  delivered to the correct location without delays
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 1f523fbddc7308b5
-                purpose_description: >-
-                  Knowing your address allows us to provide region-specific
-                  support and recommendations tailored to your area.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 8352bd6f594b7247
-                purpose_description: >-
-                  Your address helps us coordinate and schedule in-person visits
-                  or service appointments more efficiently.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-      - cp_id: 66d57222cbd66ef0ea3627d2
-        cp_name: Property booking
-        cp_status: active
-        cp_url: demo.api.com/66d57222cbd66ef0ea3627d2
-        data_elements:
-          - data_element: property booking
-            data_element_collection_status: active
-            data_element_title: Name
-            data_element_description: ' your name allows us to address you directly, creating a more personalized and engaging conversation.'
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 6e7f74624482e22c
-                purpose_description: >-
-                  Knowing your name helps us maintain a professional tone in our
-                  responses, ensuring a respectful and appropriate exchange.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 31b048ca2460945d
-                purpose_description: >-
-                  By having your name, we can better cater to your specific
-                  needs and preferences, making our communication more relevant
-                  to you.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 8d04274fe8894860
-                purpose_description: >-
-                  Your name helps us efficiently track and follow up on your
-                  inquiries, ensuring we provide timely and accurate responses.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-          - data_element: Email address
-            data_element_collection_status: active
-            data_element_title: Email
-            data_element_description: To get user email
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: a3c4a7ae06a944ea
-                purpose_description: >-
-                  Your email allows us to reach you directly, ensuring prompt
-                  and efficient communication.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: e7ca9d3092095ba1
-                purpose_description: >-
-                  Providing your email ensures you receive confirmations and
-                  follow-ups on your inquiries without delay.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 05b8e26f1ad762db
-                purpose_description: ' with your email, we can send you tailored updates and information relevant to your interests and needs.'
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-          - data_element: Phone number
-            data_element_collection_status: active
-            data_element_title: Number
-            data_element_description: To get user phone number
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: 65ea6307dd522d19
-                purpose_description: >-
-                  Your mobile number allows us to reach you quickly via call or
-                  sms for urgent or time-sensitive matters.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 3363e139e51d8467
-                purpose_description: ' we can send you timely reminders and notifications for scheduled appointments or services.'
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: c7ddd7bfe19155df
-                purpose_description: >-
-                  Having your mobile number enables us to provide direct and
-                  personalized assistance, ensuring any issues are resolved
-                  promptly.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-          - data_element: Home address
-            data_element_collection_status: active
-            data_element_title: Address
-            data_element_description: ' your address ensures that any services or products are delivered to the correct location without delays.'
-            data_owner: []
-            legal_basis: true
-            retention_period: 60
-            cross_border: false
-            sensitive: false
-            encrypted: false
-            expiry: 30
-            purposes:
-              - purpose_id: afcb02512589b580
-                purpose_description: >-
-                  Knowing your address allows us to provide region-specific
-                  support and recommendations tailored to your area.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
-              - purpose_id: 3af9f1f44d6e34c7
-                purpose_description: >-
-                  Your address helps us coordinate and schedule in-person visits
-                  or service appointments more efficiently.
-                purpose_language: en
-                purpose_expiry: 30
-                purpose_retention: 60
-                purpose_mandatory: false
-                purpose_revokable: false
-                purpose_encrypted: false
-                purpose_cross_border: false
-                purpose_shared: false
-                purpose_legal: false
+    -
+        application_id: ce151ce044ebbece
+        type: web app
+        name: Realstates demo
+        stage: development
+        application_user: india
+        collection_points_data:
+            -
+                cp_id: 66d56e1dcbd66ef0ea3627cd
+                cp_name: Rental form
+                cp_status: active
+                cp_url: demo.api.com/66d56e1dcbd66ef0ea3627cd
+                data_elements:
+                    -
+                        data_element: Full Name
+                        data_element_collection_status: active
+                        data_element_title: Name
+                        data_element_description: To get user name
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 33b641b2f7a44473
+                                purpose_description: ' your name allows us to address you directly, creating a more personalized and engaging conversation.'
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3d6
+                            -
+                                purpose_id: dad6f9d5db89e8f0
+                                purpose_description: >-
+                                    Knowing your name helps us maintain a
+                                    professional tone in our responses, ensuring
+                                    a respectful and appropriate exchange.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3d7
+                            -
+                                purpose_id: 5723f2040499dea0
+                                purpose_description: >-
+                                    By having your name, we can better cater to
+                                    your specific needs and preferences, making
+                                    our communication more relevant to you.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3d8
+                            -
+                                purpose_id: 9a8089d4e6a6c011
+                                purpose_description: >-
+                                    Your name helps us efficiently track and
+                                    follow up on your inquiries, ensuring we
+                                    provide timely and accurate responses.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3d9
+                        translated_data_element_id: 66dafd4b2848bd248ce127f0
+                    -
+                        data_element: 'Email '
+                        data_element_collection_status: active
+                        data_element_title: Email address
+                        data_element_description: To get user email address
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 003e56fb2b056975
+                                purpose_description: >-
+                                    Your email allows us to reach you directly,
+                                    ensuring prompt and efficient communication
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3da
+                            -
+                                purpose_id: 4f7d8a3ae68d2ca6
+                                purpose_description: >-
+                                    Providing your email ensures you receive
+                                    confirmations and follow-ups on your
+                                    inquiries without delay
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3db
+                            -
+                                purpose_id: ddbf93531f7e6a27
+                                purpose_description: >-
+                                    With your email, we can send you tailored
+                                    updates and information relevant to your
+                                    interests and needs.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3dc
+                            -
+                                purpose_id: 64420d2bf69e731b
+                                purpose_description: >-
+                                    Your email helps us maintain a secure and
+                                    private line of communication, protecting
+                                    your personal information.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3dd
+                        translated_data_element_id: 66dafd4b2848bd248ce127f1
+                    -
+                        data_element: Mobile Number
+                        data_element_collection_status: active
+                        data_element_title: Mobile Number
+                        data_element_description: To collect user mobile number
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 2f9d6fe8e244d39d
+                                purpose_description: ' your mobile number allows us to reach you quickly via call or sms for urgent or time-sensitive matters'
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3de
+                            -
+                                purpose_id: e74bb5a62a46c0a9
+                                purpose_description: >-
+                                    We can send you timely reminders and
+                                    notifications for scheduled appointments or
+                                    services
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3df
+                            -
+                                purpose_id: 486977deeb289dc5
+                                purpose_description: >-
+                                    Having your mobile number enables us to
+                                    provide direct and personalized assistance,
+                                    ensuring any issues are resolved promptly.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3e0
+                        translated_data_element_id: 66dafd4b2848bd248ce127f2
+                    -
+                        data_element: Home address
+                        data_element_collection_status: active
+                        data_element_title: Address
+                        data_element_description: To collect home address
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 453eac1774c0fa91
+                                purpose_description: >-
+                                    Your address ensures that any services or
+                                    products are delivered to the correct
+                                    location without delays
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3e1
+                            -
+                                purpose_id: 1f523fbddc7308b5
+                                purpose_description: >-
+                                    Knowing your address allows us to provide
+                                    region-specific support and recommendations
+                                    tailored to your area.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3e2
+                            -
+                                purpose_id: 8352bd6f594b7247
+                                purpose_description: >-
+                                    Your address helps us coordinate and
+                                    schedule in-person visits or service
+                                    appointments more efficiently.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4bd62ddc52033be3e3
+                        translated_data_element_id: 66dafd4b2848bd248ce127f3
+            -
+                cp_id: 66d57222cbd66ef0ea3627d2
+                cp_name: Property booking
+                cp_status: active
+                cp_url: demo.api.com/66d57222cbd66ef0ea3627d2
+                data_elements:
+                    -
+                        data_element: property booking
+                        data_element_collection_status: active
+                        data_element_title: Name
+                        data_element_description: ' your name allows us to address you directly, creating a more personalized and engaging conversation.'
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 6e7f74624482e22c
+                                purpose_description: >-
+                                    Knowing your name helps us maintain a
+                                    professional tone in our responses, ensuring
+                                    a respectful and appropriate exchange.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3e4
+                            -
+                                purpose_id: 31b048ca2460945d
+                                purpose_description: >-
+                                    By having your name, we can better cater to
+                                    your specific needs and preferences, making
+                                    our communication more relevant to you.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3e5
+                            -
+                                purpose_id: 8d04274fe8894860
+                                purpose_description: >-
+                                    Your name helps us efficiently track and
+                                    follow up on your inquiries, ensuring we
+                                    provide timely and accurate responses.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3e6
+                        translated_data_element_id: 66dafd4c2848bd248ce127f4
+                    -
+                        data_element: Email address
+                        data_element_collection_status: active
+                        data_element_title: Email
+                        data_element_description: To get user email
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: a3c4a7ae06a944ea
+                                purpose_description: >-
+                                    Your email allows us to reach you directly,
+                                    ensuring prompt and efficient communication.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3e7
+                            -
+                                purpose_id: e7ca9d3092095ba1
+                                purpose_description: >-
+                                    Providing your email ensures you receive
+                                    confirmations and follow-ups on your
+                                    inquiries without delay.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3e8
+                            -
+                                purpose_id: 05b8e26f1ad762db
+                                purpose_description: ' with your email, we can send you tailored updates and information relevant to your interests and needs.'
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3e9
+                        translated_data_element_id: 66dafd4c2848bd248ce127f5
+                    -
+                        data_element: Mobile Number
+                        data_element_collection_status: active
+                        data_element_title: Mobile Number
+                        data_element_description: To get user Mobile number
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: 65ea6307dd522d19
+                                purpose_description: >-
+                                    Your mobile number allows us to reach you
+                                    quickly via call or sms for urgent or
+                                    time-sensitive matters.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3ea
+                            -
+                                purpose_id: 3363e139e51d8467
+                                purpose_description: ' we can send you timely reminders and notifications for scheduled appointments or services.'
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3eb
+                            -
+                                purpose_id: c7ddd7bfe19155df
+                                purpose_description: >-
+                                    Having your mobile number enables us to
+                                    provide direct and personalized assistance,
+                                    ensuring any issues are resolved promptly.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3ec
+                        translated_data_element_id: 66dafd4c2848bd248ce127f6
+                    -
+                        data_element: Home address
+                        data_element_collection_status: active
+                        data_element_title: Address
+                        data_element_description: ' your address ensures that any services or products are delivered to the correct location without delays.'
+                        data_owner: []
+                        legal_basis: true
+                        retention_period: 60
+                        cross_border: false
+                        sensitive: false
+                        encrypted: false
+                        expiry: 30
+                        purposes:
+                            -
+                                purpose_id: afcb02512589b580
+                                purpose_description: >-
+                                    Knowing your address allows us to provide
+                                    region-specific support and recommendations
+                                    tailored to your area.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3ed
+                            -
+                                purpose_id: 3af9f1f44d6e34c7
+                                purpose_description: >-
+                                    Your address helps us coordinate and
+                                    schedule in-person visits or service
+                                    appointments more efficiently.
+                                purpose_language: en
+                                purpose_expiry: 30
+                                purpose_retention: 60
+                                purpose_mandatory: false
+                                purpose_revokable: false
+                                purpose_encrypted: false
+                                purpose_cross_border: false
+                                purpose_shared: false
+                                purpose_legal: false
+                                translated_purpose_id: 66dafd4cd62ddc52033be3ee
+                        translated_data_element_id: 66dafd4c2848bd248ce127f7
