@@ -2,17 +2,7 @@
 import React, { useState } from "react";
 import Loader from "../Loader";
 
-const ExamForm = ({ handleShowNotice, disabled }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    studentId: "",
-    email: "",
-    course: "",
-    semester: "",
-    subject: "",
-    contactNumber: "",
-  });
-
+const ExamForm = ({ handleShowNotice, disabled, formData, setFormData }) => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 

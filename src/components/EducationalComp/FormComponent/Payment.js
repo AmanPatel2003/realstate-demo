@@ -2,15 +2,7 @@
 import React, { useState } from "react";
 import Loader from "../Loader";
 
-const Payment = ({ handleShowNotice, disabled }) => {
-  const [formData, setFormData] = useState({
-    cardNumber: "",
-    expiryMonth: "",
-    expiryYear: "",
-    cvv: "",
-    agree: false,
-  });
-
+const Payment = ({ handleShowNotice, disabled, formData, setFormData }) => {
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prevData) => ({
@@ -29,7 +21,7 @@ const Payment = ({ handleShowNotice, disabled }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+    <div className="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg mt-5">
       <h2 className="text-2xl font-bold mb-6 text-center">Payment Form</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">

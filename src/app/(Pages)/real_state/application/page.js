@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 
 import Application from "@/components/RealStateComp/Application";
 import { useRouter } from "next/navigation";
