@@ -12,9 +12,11 @@ import Footer from "@/components/matrimonialComp/Footer";
 
 
 export default function Home() {
+
   return (
     <div className=" h-screen ">
       <div className="relative ">
+
         <Image
           src="/photo1.png"
           alt="image"
@@ -22,7 +24,11 @@ export default function Home() {
           height={1}
           className=" w-full h-[85vh] -z-50"
         />
+
+
+
         <div className="absolute z-50 top-0 ">
+         
           <NavBar />
           <FeaturesSection />
           <Find />

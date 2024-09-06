@@ -74,7 +74,7 @@ const Page = () => {
       const agreementId = localStorage.getItem("agreement_id");
       if (agreementId) {
         // If agreement_id exists, route to the landing page
-        router.push("/dashboard"); // Replace with your actual landing page route
+        router.push("/matrimonial/dashboard"); // Replace with your actual landing page route
         localStorage.removeItem("agreement_id");
       } else {
         // If agreement_id doesn't exist, show the notice center
