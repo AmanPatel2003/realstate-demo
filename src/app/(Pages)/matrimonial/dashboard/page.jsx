@@ -207,8 +207,8 @@ const Page = () => {
             </h1>
             <p className="mt-4 max-w-xl mx-auto">
               As our numerous success stories prove, marriages are really made
-              at Jeevansathi.com. Here's wishing all our members who found their
-              ideal partner here a lifetime of happiness!
+              at Jeevansathi.com. Here&apos;s wishing all our members who found
+              their ideal partner here a lifetime of happiness!
             </p>
             <button className="mt-6 bg-red-500 text-white px-6 py-2 rounded">
               Send us your success story
