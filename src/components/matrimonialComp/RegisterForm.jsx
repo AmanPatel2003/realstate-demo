@@ -46,7 +46,7 @@ export default function RegisterForm() {
       const agreementId = localStorage.getItem("agreement_id");
       if (agreementId) {
         // If agreement_id exists, route to the landing page
-        router.push("/personal_details"); // Replace with your actual landing page route
+        router.push("/matrimonial/personal_details"); // Replace with your actual landing page route
         localStorage.removeItem("agreement_id");
       } else {
         // If agreement_id doesn't exist, show the notice center

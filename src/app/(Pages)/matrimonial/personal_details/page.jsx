@@ -151,7 +151,7 @@ const Page = () => {
         console.log("handleShowNotice function call");
         const agreementId = localStorage.getItem("agreement_id");
         if (agreementId) {
-          router.push("/dashboard"); // Replace with your actual landing page route
+          router.push("/matrimonial/dashboard"); // Replace with your actual landing page route
           localStorage.removeItem("agreement_id");
         } else {
           morajNoticeCenter(

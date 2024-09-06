@@ -49,7 +49,7 @@ const Page = () => {
         {
             id: 6,
             image: 'https://i.pinimg.com/564x/9b/cb/1f/9bcb1f30e6e2974faa8d59847979abd1.jpg',
-            name: 'Sahil Sharma ~ Palak Sharma',
+            name: 'Naruto ~ Hinata',
             description: 'He is very loving and caring. Thanks to Jeevansathi.com',
             link: '#',
         },
@@ -75,11 +75,11 @@ const Page = () => {
                             <nav className="space-x-4 flex">
                                 <div className="text-white">MATCHES</div>
                                 <div className="text-white">ACTIVITY</div>
-                                <Link href='/preference'>
+                                <Link href='/matrimonial/preference'>
                                     <div className="text-white">PREWFERENCE</div>
                                 </Link>
 
-                                <Link href='/upgrade_plans'>
+                                <Link href='/matrimonial/upgrade_plans'>
                                     <div className="text-white">UPGRADE</div>
                                 </Link>
 

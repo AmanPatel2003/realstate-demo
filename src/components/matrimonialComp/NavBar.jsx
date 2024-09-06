@@ -12,12 +12,22 @@ import PrivacyControlIcon from './PrivacyControlIcon';
 import LoginForm from './LoginForm';
 
 const NavBar = () => {
+
+// const FillData = ()=>{
+//     console.log('Data filled')
+// }
+
     const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
     const [isSearchDropdownOpen, setIsSearchDropdownOpen] = useState(false);
     const [showLoginForm, setShowLoginForm] = useState(false);
 
     return (
         <>
+         {/* <button
+             onClick={FillData}
+            className="px-6 py-3 absolute top-2 text-pink-600 hover:text-white  cursor-pointer right-10 border border-pink-600 hover:bg-pink-700 rounded-lg z-50">
+            Fill Data
+          </button> */}
             <header className="bg-slate-700 shadow fixed top-0 left-0 right-0 z-50 mx-64 ">
                 <div className="flex justify-between items-center  h-16   mx-auto ">
                     <div className="bg-white text-center h-16 w-32 flex items-center justify-center">
