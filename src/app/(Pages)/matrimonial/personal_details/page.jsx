@@ -5,187 +5,192 @@ import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 const Page = () => {
-  const router = useRouter();
-  const [isLoading, setIsLoading] = useState(false);
+ const router = useRouter();
+ const [isLoading, setIsLoading] = useState(false);
+ const [currentStep, setCurrentStep] = useState(0);
 
-  const [currentStep, setCurrentStep] = useState(() => {
-    const savedStep = localStorage.getItem("currentStep");
-    return savedStep !== null ? JSON.parse(savedStep) : 0;
-  });
+ useEffect(() => {
+   // Ensure localStorage is only accessed on the client side
+   const savedStep = localStorage.getItem("currentStep");
+   if (savedStep !== null) {
+     setCurrentStep(JSON.parse(savedStep));
+   }
+ }, []);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    dob: "",
-    motherTongue: "",
-    religion: "",
-    maritalStatus: "",
-    height: "",
-    country: "",
-    degree: "",
-    employedIn: "",
-    income: "",
-    expressYourself: "",
-    familyType: "",
-    fatherOccupation: "",
-    motherOccupation: "",
-    contactAddress: "",
-    aboutFamily: "",
-  });
+ useEffect(() => {
+   // Ensure localStorage is only accessed on the client side
+   localStorage.setItem("currentStep", JSON.stringify(currentStep));
+ }, [currentStep]);
 
-  const [errors, setErrors] = useState({
-    name: "",
-    dob: "",
-    motherTongue: "",
-    religion: "",
-    maritalStatus: "",
-    height: "",
-    country: "",
-    degree: "",
-    employedIn: "",
-    income: "",
-    familyType: "",
-    contactAddress: "",
-  });
+ const [formData, setFormData] = useState({
+   name: "",
+   dob: "",
+   motherTongue: "",
+   religion: "",
+   maritalStatus: "",
+   height: "",
+   country: "",
+   degree: "",
+   employedIn: "",
+   income: "",
+   expressYourself: "",
+   familyType: "",
+   fatherOccupation: "",
+   motherOccupation: "",
+   contactAddress: "",
+   aboutFamily: "",
+ });
 
-  const steps = ["Profile Details", "Career Details", "Lifestyle & Family"];
+ const [errors, setErrors] = useState({
+   name: "",
+   dob: "",
+   motherTongue: "",
+   religion: "",
+   maritalStatus: "",
+   height: "",
+   country: "",
+   degree: "",
+   employedIn: "",
+   income: "",
+   familyType: "",
+   contactAddress: "",
+ });
 
-  const options = {
-    motherTongue: ["Hindi", "Bengali", "Telugu", "Marathi", "Tamil"],
-    religion: ["Hindu", "Muslim", "Christian", "Sikh", "Other"],
-    maritalStatus: ["Single", "Married", "Divorced", "Widowed"],
-    height: [
-      "4'0\" - 4'5\"",
-      "4'6\" - 5'0\"",
-      "5'1\" - 5'5\"",
-      "5'6\" - 6'0\"",
-      "6'1\" and above",
-    ],
-    country: ["India", "USA", "Canada", "UK", "Australia"],
-    degree: ["High School", "Bachelor's", "Master's", "PhD"],
-    employedIn: [
-      "Private Sector",
-      "Government",
-      "Self-Employed",
-      "Student",
-      "Other",
-    ],
-    income: [
-      "< 3 Lakh",
-      "3 - 5 Lakh",
-      "5 - 10 Lakh",
-      "10 - 20 Lakh",
-      "20 Lakh and above",
-    ],
-  };
+ const steps = ["Profile Details", "Career Details", "Lifestyle & Family"];
 
-  useEffect(() => {
-    localStorage.setItem("currentStep", JSON.stringify(currentStep));
-  }, [currentStep]);
+ const options = {
+   motherTongue: ["Hindi", "Bengali", "Telugu", "Marathi", "Tamil"],
+   religion: ["Hindu", "Muslim", "Christian", "Sikh", "Other"],
+   maritalStatus: ["Single", "Married", "Divorced", "Widowed"],
+   height: [
+     "4'0\" - 4'5\"",
+     "4'6\" - 5'0\"",
+     "5'1\" - 5'5\"",
+     "5'6\" - 6'0\"",
+     "6'1\" and above",
+   ],
+   country: ["India", "USA", "Canada", "UK", "Australia"],
+   degree: ["High School", "Bachelor's", "Master's", "PhD"],
+   employedIn: [
+     "Private Sector",
+     "Government",
+     "Self-Employed",
+     "Student",
+     "Other",
+   ],
+   income: [
+     "< 3 Lakh",
+     "3 - 5 Lakh",
+     "5 - 10 Lakh",
+     "10 - 20 Lakh",
+     "20 Lakh and above",
+   ],
+ };
 
-  const handleNext = () => {
-    if (validateCurrentStep()) {
-      setCurrentStep(currentStep + 1);
-    }
-  };
+ const handleNext = () => {
+   if (validateCurrentStep()) {
+     setCurrentStep(currentStep + 1);
+   }
+ };
 
-  const handlePrev = () => {
-    setCurrentStep(currentStep - 1);
-  };
+ const handlePrev = () => {
+   setCurrentStep(currentStep - 1);
+ };
 
-  const handleSelectChange = (field, value) => {
-    setFormData({ ...formData, [field]: value });
-  };
+ const handleSelectChange = (field, value) => {
+   setFormData({ ...formData, [field]: value });
+ };
 
-  const validateCurrentStep = () => {
-    let isValid = true;
-    let errorsCopy = { ...errors };
+ const validateCurrentStep = () => {
+   let isValid = true;
+   let errorsCopy = { ...errors };
 
-    if (currentStep === 0) {
-      if (!formData.name) {
-        errorsCopy.name = "Name is required.";
-        isValid = false;
-      }
-      if (!formData.dob) {
-        errorsCopy.dob = "Date of Birth is required.";
-        isValid = false;
-      }
-      if (!formData.motherTongue) {
-        errorsCopy.motherTongue = "Mother Tongue is required.";
-        isValid = false;
-      }
-      if (!formData.religion) {
-        errorsCopy.religion = "Religion is required.";
-        isValid = false;
-      }
-      if (!formData.maritalStatus) {
-        errorsCopy.maritalStatus = "Marital Status is required.";
-        isValid = false;
-      }
-      if (!formData.height) {
-        errorsCopy.height = "Height is required.";
-        isValid = false;
-      }
-    } else if (currentStep === 1) {
-      if (!formData.country) {
-        errorsCopy.country = "Country is required.";
-        isValid = false;
-      }
-      if (!formData.degree) {
-        errorsCopy.degree = "Highest Degree is required.";
-        isValid = false;
-      }
-      if (!formData.employedIn) {
-        errorsCopy.employedIn = "Employment Status is required.";
-        isValid = false;
-      }
-      if (!formData.income) {
-        errorsCopy.income = "Income is required.";
-        isValid = false;
-      }
-    } else if (currentStep === 2) {
-      if (!formData.familyType) {
-        errorsCopy.familyType = "Family Type is required.";
-        isValid = false;
-      }
-      if (!formData.contactAddress) {
-        errorsCopy.contactAddress = "Contact Address is required.";
-        isValid = false;
-      }
-    }
+   if (currentStep === 0) {
+     if (!formData.name) {
+       errorsCopy.name = "Name is required.";
+       isValid = false;
+     }
+     if (!formData.dob) {
+       errorsCopy.dob = "Date of Birth is required.";
+       isValid = false;
+     }
+     if (!formData.motherTongue) {
+       errorsCopy.motherTongue = "Mother Tongue is required.";
+       isValid = false;
+     }
+     if (!formData.religion) {
+       errorsCopy.religion = "Religion is required.";
+       isValid = false;
+     }
+     if (!formData.maritalStatus) {
+       errorsCopy.maritalStatus = "Marital Status is required.";
+       isValid = false;
+     }
+     if (!formData.height) {
+       errorsCopy.height = "Height is required.";
+       isValid = false;
+     }
+   } else if (currentStep === 1) {
+     if (!formData.country) {
+       errorsCopy.country = "Country is required.";
+       isValid = false;
+     }
+     if (!formData.degree) {
+       errorsCopy.degree = "Highest Degree is required.";
+       isValid = false;
+     }
+     if (!formData.employedIn) {
+       errorsCopy.employedIn = "Employment Status is required.";
+       isValid = false;
+     }
+     if (!formData.income) {
+       errorsCopy.income = "Income is required.";
+       isValid = false;
+     }
+   } else if (currentStep === 2) {
+     if (!formData.familyType) {
+       errorsCopy.familyType = "Family Type is required.";
+       isValid = false;
+     }
+     if (!formData.contactAddress) {
+       errorsCopy.contactAddress = "Contact Address is required.";
+       isValid = false;
+     }
+   }
 
-    setErrors(errorsCopy);
-    return isValid;
-  };
+   setErrors(errorsCopy);
+   return isValid;
+ };
 
-  const handleShowNotice = async () => {
-    if (validateCurrentStep()) {
-      setIsLoading(true);
-      if (typeof window !== "undefined") {
-        const { morajNoticeCenter } = await import(
-          "concur-consent/morajNoticeCenter"
-        );
+ const handleShowNotice = async () => {
+   if (validateCurrentStep()) {
+     setIsLoading(true);
+     if (typeof window !== "undefined") {
+       const { morajNoticeCenter } = await import(
+         "concur-consent/morajNoticeCenter"
+       );
 
-        console.log("handleShowNotice function call");
-        const agreementId = localStorage.getItem("agreement_id");
-        if (agreementId) {
-          router.push("/matrimonial/dashboard"); // Replace with your actual landing page route
-          localStorage.removeItem("agreement_id");
-        } else {
-          morajNoticeCenter(
-            "66d9506fcbd66ef0ea36284b",
-            "a5b38b10e6316732",
-            "66d5b9c2cbd66ef0ea3627fd",
-            "mmEVIRTZ_UGUKJQ4Nfxgaw",
-            "gQGpM81A-LsTj6CA55IvUQz6Op_crRgjOm_b88Gs3EU"
-          );
-          setTimeout(() => {
-            setIsLoading(false);
-          }, 2000);
-        }
-      }
-    }
-    localStorage.removeItem("currentStep");
-  };
+       console.log("handleShowNotice function call");
+       const agreementId = localStorage.getItem("agreement_id");
+       if (agreementId) {
+         router.push("/matrimonial/dashboard"); // Replace with your actual landing page route
+         localStorage.removeItem("agreement_id");
+       } else {
+         morajNoticeCenter(
+           "66d9506fcbd66ef0ea36284b",
+           "a5b38b10e6316732",
+           "66d5b9c2cbd66ef0ea3627fd",
+           "mmEVIRTZ_UGUKJQ4Nfxgaw",
+           "gQGpM81A-LsTj6CA55IvUQz6Op_crRgjOm_b88Gs3EU"
+         );
+         setTimeout(() => {
+           setIsLoading(false);
+         }, 2000);
+       }
+     }
+     localStorage.removeItem("currentStep");
+   }
+ };
 
   return (
     <div className="max-w-xl mx-auto mt-10 mb-16">
