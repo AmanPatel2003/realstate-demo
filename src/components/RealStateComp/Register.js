@@ -6,8 +6,8 @@ const Register = ({ handleShowNotice, disabled, setDisabled }) => {
     fullName: "",
     email: "",
     phoneNumber: "",
-    password: "",
-    confirmPassword: "",
+    // password: "",
+    // confirmPassword: "",
   });
 
   const handleChange = (e) => {
@@ -24,8 +24,25 @@ const Register = ({ handleShowNotice, disabled, setDisabled }) => {
     console.log("Form Data:", formData);
     handleShowNotice();
   };
+
+const updateFormData = () => {
+  setFormData({
+    fullName: "Gaurav Mehta",
+    email: "demo@perfios.com",
+    phoneNumber: "8770467824",
+    // password: "securePassword123", // Add your desired password
+    // confirmPassword: "securePassword123", // Should match the password
+  });
+};
+
   return (
     <div className=" h-screen flex items-center justify-center">
+      <button
+        onClick={updateFormData}
+        className=" absolute top-24 right-10 text-red-500 border border-red-500 focus:ring-4 hover:bg-red-500 hover:text-white font-medium rounded-md text-base w-full sm:w-auto px-7 py-3 text-center"
+      >
+        Fill Data
+      </button>
       <div className=" max-w-lg mx-auto p-8 border rounded-lg shadow-lg w-[50%] bg-white">
         <h2 className="text-2xl font-bold mb-6 text-center">
           User Registration
@@ -67,7 +84,7 @@ const Register = ({ handleShowNotice, disabled, setDisabled }) => {
               required
             />
           </div>
-          <div>
+          {/* <div>
             <label className="block text-gray-700">Password</label>
             <input
               type="password"
@@ -90,7 +107,7 @@ const Register = ({ handleShowNotice, disabled, setDisabled }) => {
               placeholder="Confirm your password"
               required
             />
-          </div>
+          </div> */}
           <button
             type="submit"
             disabled={disabled}
