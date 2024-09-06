@@ -2,27 +2,12 @@
 import React, { useState } from "react";
 import Loader from "../Loader";
 
-const ApplicationForm = ({ handleShowNotice, disabled }) => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    mobile: "",
-    dob: "",
-    gender: "",
-    category: "",
-    program: "",
-    course: "",
-    country: "",
-    state: "",
-    city: "",
-    address: "",
-    marks12th: "",
-    universityName: "",
-    schoolName: "",
-    passingYear: "",
-    percentage: "",
-  });
-
+const ApplicationForm = ({
+  handleShowNotice,
+  disabled,
+  formData,
+  setFormData,
+}) => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -94,7 +79,6 @@ const ApplicationForm = ({ handleShowNotice, disabled }) => {
           </div>
         </div>
 
-        {/* Personal Details */}
         <h3 className="text-xl text-[#071C55] font-bold mb-4">
           Personal Details
         </h3>
@@ -170,9 +154,6 @@ const ApplicationForm = ({ handleShowNotice, disabled }) => {
           </div>
         </div>
 
-        {/* Program & Course */}
-
-        {/* Address */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
           <div>
             <label className="block mb-2">Country</label>
@@ -206,7 +187,6 @@ const ApplicationForm = ({ handleShowNotice, disabled }) => {
           </div>
         </div>
 
-        {/* Education Qualification */}
         <div className="mb-6">
           <h3 className="text-xl text-[#071C55] font-bold mb-4">
             Education Qualification
