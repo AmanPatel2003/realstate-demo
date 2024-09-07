@@ -37,7 +37,7 @@ const Page = () => {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(paymentMethods[0].id);
 
   const [cardNumber, setCardNumber] = useState('');
-  const [expirationDate, setExpirationDate] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [upiId, setUpiId] = useState('');
 
@@ -46,22 +46,12 @@ const Page = () => {
 
   const selectedPlanDetails = plans.find((plan) => plan.id === selectedPlan);
 
-  // const handleShowNotice = () => {
-  //   const agreementId = localStorage.getItem("agreement_id");
 
-  //   if (agreementId) {
-  //     localStorage.removeItem("agreement_id");
-  //     router.push('/dashboard');
-  //   } else {
-  //     morajNoticeCenter(
-  //       "66d95766cbd66ef0ea362853",
-  //       "a5b38b10e6316732",
-  //       "66d5b9c2cbd66ef0ea3627fd",
-  //       "mmEVIRTZ_UGUKJQ4Nfxgaw",
-  //       "gQGpM81A-LsTj6CA55IvUQz6Op_crRgjOm_b88Gs3EU"
-  //     );
-  //   }
-  // };
+  const handleFillData = () => {
+    setCardNumber('9513574268586943');
+    setExpiryDate('14/15');
+    setCvv('137');
+  };
 
   const handleShowNotice = async () => {
     setIsLoading(true);
@@ -100,7 +90,7 @@ const Page = () => {
       if (cardNumber.length !== 16) {
         tempErrors.cardNumber = 'Card number must be 16 digits';
       }
-      if (!/^\d{2}\/\d{2}$/.test(expirationDate)) {
+      if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
         tempErrors.expirationDate = 'Expiration date must be in MM/YY format';
       }
       if (cvv.length !== 3) {
@@ -172,7 +162,14 @@ const Page = () => {
           ))}
         </div>
 
-        <h2 className="text-3xl font-bold text-gray-800 mt-10 mb-6">Select Payment Method</h2>
+       <div className='flex gap-4'>
+       <h2 className="text-3xl font-bold text-gray-800 mt-10 mb-6">Select Payment Method</h2>
+        <button
+            onClick={handleFillData}
+            className="px-6 h-12 mt-8   text-pink-600 hover:text-white cursor-pointer  border border-pink-600 hover:bg-pink-700 rounded-lg z-50">
+            Fill Data
+          </button>
+       </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {paymentMethods.map((method) => (
             <div
@@ -233,13 +230,13 @@ const Page = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-gray-600 font-medium">Expiration Date</label>
+                  <label className="block text-gray-600 font-medium">Expiry Date</label>
                   <input
                     type="text"
                     className={`w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-600 placeholder-gray-400 ${errors.expirationDate ? 'border-red-500' : ''}`}
                     placeholder="MM/YY"
-                    value={expirationDate}
-                    onChange={(e) => setExpirationDate(e.target.value)}
+                    value={expiryDate}
+                    onChange={(e) => setExpiryDate(e.target.value)}
                   />
                   {errors.expirationDate && <p className="text-red-500 text-sm">{errors.expirationDate}</p>}
                 </div>

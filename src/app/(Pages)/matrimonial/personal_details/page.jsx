@@ -170,6 +170,37 @@ const Page = () => {
     localStorage.removeItem('currentStep');
   };
 
+  const handleFillData1 = () => {
+    setFormData({
+      ...formData,
+      name: "Abhishek",
+      dob: "1995-01-01",
+      motherTongue: "Hindi",
+      religion: "Hindu",
+      maritalStatus: "Single",
+      height: "5'1\" - 5'5\"",
+    });
+  };
+  
+
+  const handleFillData2 = () => {
+    setFormData({
+      ...formData,
+      country: "India",
+      degree: "Master's",
+      employedIn: "Private Sector",
+      income: "3 - 5 Lakh",
+    });
+  };
+
+  const handleFillData3 = () => {
+    setFormData({
+      ...formData,
+      familyType: "Joint",
+      contactAddress: "house no: EWS 23, street 24, cross 2, Raipur (CG)",
+    });
+  };
+
   return (
     <div className="max-w-xl mx-auto mt-10 mb-16">
       {/* Stepper */}
@@ -191,6 +222,11 @@ const Page = () => {
       {currentStep === 0 && (
         <div>
           <h2 className="text-xl font-semibold mb-4">Profile Details</h2>
+          <button
+            onClick={handleFillData1}
+            className="px-6 py-3 absolute top-2 text-pink-600 hover:text-white cursor-pointer right-10 border border-pink-600 hover:bg-pink-700 rounded-lg z-50">
+            Fill Data
+          </button>
           <div className="space-y-4">
             <div>
               <label className="block mb-1">Full Name *</label>
@@ -294,6 +330,11 @@ const Page = () => {
       {currentStep === 1 && (
         <div>
           <h2 className="text-xl font-semibold mb-4">Career Details</h2>
+          <button
+           onClick={handleFillData2}
+            className="px-6 py-3 absolute top-2 text-pink-600 hover:text-white cursor-pointer right-10 border border-pink-600 hover:bg-pink-700 rounded-lg z-50">
+            Fill Data
+          </button>
           <div className="space-y-4">
             <div>
               <label className="block mb-1">Country *</label>
@@ -373,6 +414,11 @@ const Page = () => {
           <div className="space-y-4">
             <div>
               <label className="block mb-1">Family Type </label>
+              <button
+          onClick={handleFillData3}
+            className="px-6 py-3 absolute top-2 text-pink-600 hover:text-white cursor-pointer right-10 border border-pink-600 hover:bg-pink-700 rounded-lg z-50">
+            Fill Data
+          </button>
               <select
                 value={formData.familyType}
                 onChange={(e) =>
@@ -426,17 +472,24 @@ const Page = () => {
           </button>
         ) : (
           <button
-            className="px-4 py-2 bg-[#D9475C] text-white rounded"
-            onClick={handleShowNotice}
-          // onClick={() => router.push('/dashboard')}
-          >
-            {isLoading ? <Loader /> : "Submit"}
-
-          </button>
+          className="px-4 py-2 bg-[#D9475C] text-white rounded mx-4 flex justify-center items-center"
+          onClick={handleShowNotice}
+          disabled={isLoading} // Optionally disable the button when loading
+        >
+          {isLoading ? (
+            <div className="flex justify-center items-center  ml-4 text-center">
+              <Loader />
+            </div>
+          ) : (
+            "Submit"
+          )}
+        </button>
+        
+        
         )}
       </div>
 
-      {/* {isLoading && <Loader />} */}
+     
     </div>
   );
 };

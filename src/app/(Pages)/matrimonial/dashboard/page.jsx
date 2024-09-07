@@ -100,7 +100,7 @@ const Page = () => {
 
                                         {showModal && (
                                             <div className="absolute right-0 mt-2 w-96 z-50   bg-white shadow-2xl rounded-lg  px-4 py-4">
-                                                <Link href="/trust-bank/preference-center">
+                                                {/* <Link href="/trust-bank/preference-center"> */}
                                                     <div className="p-2 border-b border-gray-400 cursor-pointer">
                                                         <h1 className="text-gray-500 font-normal text-xs">
                                                             {" "}
@@ -111,8 +111,8 @@ const Page = () => {
                                                             to continue with service experience.
                                                         </h1>
                                                     </div>
-                                                </Link>
-                                                <Link href="/trust-bank/preference-center">
+                                                {/* </Link> */}
+                                                {/* <Link href="/trust-bank/preference-center"> */}
                                                     <div className="p-2 border-b border-gray-400 cursor-pointer">
                                                         <h1 className="text-gray-500 font-normal text-xs">
                                                             {" "}
@@ -122,8 +122,8 @@ const Page = () => {
                                                             Your account balance is now ₹ 15,250.00.
                                                         </h1>
                                                     </div>
-                                                </Link>
-                                                <Link href="/trust-bank/preference-center">
+                                                {/* </Link> */}
+                                                {/* <Link href="/trust-bank/preference-center"> */}
                                                     <div className="p-2 border-b border-gray-400 cursor-pointer">
                                                         <h1 className="text-gray-500 font-normal text-xs">
                                                             {" "}
@@ -134,8 +134,8 @@ const Page = () => {
                                                             Reconsent to continue with service experience
                                                         </h1>
                                                     </div>
-                                                </Link>
-                                                <Link href="/trust-bank/preference-center">
+                                                {/* </Link> */}
+                                                {/* <Link href="/trust-bank/preference-center"> */}
                                                     <div className="p-2 border-b border-gray-400 cursor-pointer">
                                                         <h1 className="text-gray-500 font-normal text-xs">
                                                             {" "}
@@ -146,8 +146,8 @@ const Page = () => {
                                                             your account ending in 1234.
                                                         </h1>
                                                     </div>
-                                                </Link>
-                                                <Link href="/trust-bank/preference-center">
+                                                {/* </Link> */}
+                                                {/* <Link href="/trust-bank/preference-center"> */}
                                                     <div className="p-2 border-b border-gray-400 cursor-pointer">
                                                         <h1 className="text-gray-500 font-normal text-xs">
                                                             {" "}
@@ -158,8 +158,8 @@ const Page = () => {
                                                             to continue wit service experience.
                                                         </h1>
                                                     </div>
-                                                </Link>
-                                                <Link href="/trust-bank/preference-center">
+                                                {/* </Link> */}
+                                                {/* <Link href="/trust-bank/preference-center"> */}
                                                     <div className="p-2  border-gray-400 cursor-pointer">
                                                         <h1 className="text-gray-500 font-normal text-xs">
                                                             24,August,2024
@@ -168,7 +168,7 @@ const Page = () => {
                                                             Your account balance is now ₹ 10,250.00.
                                                         </h1>
                                                     </div>
-                                                </Link>
+                                                {/* </Link> */}
                                             </div>
                                         )}
                                     </div>
@@ -177,7 +177,7 @@ const Page = () => {
 
 
                                 <div className="text-white pr-4">
-                                    <Link href='/user_profile'>
+                                    <Link href='/matrimonial/user_profile'>
                                         <i className="fas fa-user-circle "><LuUserCircle2 /></i>
                                     </Link>
                                 </div>

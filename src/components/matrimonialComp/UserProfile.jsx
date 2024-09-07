@@ -9,7 +9,7 @@ const UserProfile = () => {
 
         {/* Left Section - Profile Picture & Personal Info */}
         <div className="lg:w-1/3 flex flex-col items-center lg:items-start">
-          <Link href="/dashboard">
+          <Link href="/matrimonial/dashboard">
             <div className="text-gray-500 hover:text-gray-700 cursor-pointer mb-6">
               <BiArrowBack size={24} />
             </div>
