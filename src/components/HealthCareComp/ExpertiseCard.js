@@ -34,8 +34,8 @@ const ExpertiseCard = () => {
           <div className="absolute inset-0 flex flex-col justify-end p-7 opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-in-out z-20">
             <span className="w-full">
               <p className="text-sm mb-4 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out">
-                At Narayana Health, we've been the pioneers in heart care since
-                2000. We're known worldwide for treating complex heart problems.
+                At Narayana Health, we&apos;ve been the pioneers in heart care since
+                2000. We&apos;re known worldwide for treating complex heart problems.
               </p>
               <Link
                 href="#"
@@ -158,7 +158,7 @@ const ExpertiseCard = () => {
           <div className="absolute inset-0 flex flex-col justify-end p-7 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-20">
             <span className="w-full">
               <p className="text-sm mb-4 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out">
-                As one of the top orthopaedic hospitals in India, we've served
+                As one of the top orthopaedic hospitals in India, we&apos;ve served
                 thousands over two decades, delivering quality healthcare.
               </p>
               <Link

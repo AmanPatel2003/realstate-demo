@@ -55,7 +55,7 @@ const AddProperty = () => {
 
         <div className="mb-6">
           <label className="block text-gray-700 font-medium mb-2">
-            What's the address of your property?
+            What&apos;s the address of your property?
           </label>
           <input
             type="text"

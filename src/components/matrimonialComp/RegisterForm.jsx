@@ -161,7 +161,7 @@ export default function RegisterForm({ profileFor1, emailAddress, mobileNum, pas
           {isLoading ? <Loader /> : "Register for Free"}
         </button>
         <p className="mt-6 text-xs text-gray-400">
-          By clicking on 'Register Free,' you confirm that you accept the
+          By clicking on &apos;Register Free,&apos; you confirm that you accept the
           <span className="text-pink-500"> Terms of Use</span> and
           <span className="text-pink-500"> Privacy Policy</span>.
         </p>

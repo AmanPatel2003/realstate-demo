@@ -8,7 +8,7 @@ const Footer = () => {
           <h4 className="font-bold mb-2">Get Local Info</h4>
           <p className="text-gray-400">
             Does it have pet-friendly rentals? How are the schools? Get
-            important local information on the areas you're most interested in.
+            important local information on the areas you&apos;re most interested in.
           </p>
           <input
             type="text"

@@ -86,7 +86,7 @@ const Navbar = () => {
                               22, August, 2024
                           </h1>
                           <h1 className="text-[#FF0000] font-semibold text-sm">
-                              Your listing for "Luxury Apartment in Downtown" is about to expire. Renew to keep it active.
+                              Your listing for &quot;Luxury Apartment in Downtown&quot; is about to expire. Renew to keep it active.
                           </h1>
                       </div>
                   {/* </Link> */}
@@ -97,7 +97,7 @@ const Navbar = () => {
                               22, August, 2024
                           </h1>
                           <h1 className="text-gray-600 font-semibold text-sm">
-                              Price Update: The price of "Modern Family Home in Suburbia" has changed to ₹ 15,250,000.00.
+                              Price Update: The price of &quot;Modern Family Home in Suburbia&quot; has changed to ₹ 15,250,000.00.
                           </h1>
                       </div>
                   {/* </Link> */}
@@ -119,7 +119,7 @@ const Navbar = () => {
                               23, August, 2024
                           </h1>
                           <h1 className="text-gray-600 font-semibold text-sm">
-                              Viewing Alert: A client has scheduled a viewing for "Seaside Villa" on 24, August, 2024.
+                              Viewing Alert: A client has scheduled a viewing for &quot;Seaside Villa&quot; on 24, August, 2024.
                           </h1>
                       </div>
                   {/* </Link> */}
@@ -140,7 +140,7 @@ const Navbar = () => {
                               24, August, 2024
                           </h1>
                           <h1 className="text-gray-600 font-semibold text-sm">
-                              Offer Received: You've received a new offer of ₹ 10,250,000.00 for "Downtown Loft".
+                              Offer Received: You&apos;ve received a new offer of ₹ 10,250,000.00 for &quot;Downtown Loft&quot;.
                           </h1>
                       </div>
                   {/* </Link> */}

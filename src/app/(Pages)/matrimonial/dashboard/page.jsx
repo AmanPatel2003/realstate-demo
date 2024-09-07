@@ -172,7 +172,7 @@ const Page = () => {
                     <div className="relative  text-white text-center mt-16">
                         <h1 className="text-4xl font-semibold">More than 204,123 Success Stories and counting</h1>
                         <p className="mt-4 max-w-xl mx-auto">
-                            As our numerous success stories prove, marriages are really made at Jeevansathi.com. Here's wishing all our members who found their ideal partner here a lifetime of happiness!
+                            As our numerous success stories prove, marriages are really made at Jeevansathi.com. Here&apos;s wishing all our members who found their ideal partner here a lifetime of happiness!
                         </p>
                         <button className="mt-6 bg-red-500 text-white px-6 py-2 rounded">Send us your success story</button>
                     </div>

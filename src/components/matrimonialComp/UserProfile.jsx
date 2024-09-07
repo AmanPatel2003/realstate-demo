@@ -32,7 +32,7 @@ const UserProfile = () => {
               <li><strong>Mother Tongue:</strong> Hindi</li>
               <li><strong>Religion:</strong> Hindu</li>
               <li><strong>Marital Status:</strong> Single</li>
-              <li><strong>Height:</strong> 5'9"</li>
+              <li><strong>Height:</strong> 5&apos;9&quot;</li>
               <li><strong>Country:</strong> India</li>
               <li><strong>Degree:</strong> B.Tech in Computer Science</li>
               <li><strong>Employed In:</strong> Private</li>
@@ -48,8 +48,8 @@ const UserProfile = () => {
             <h2 className="text-2xl font-semibold text-gray-700 mb-4">Family Details</h2>
             <ul className="space-y-2 text-gray-600">
               <li><strong>Family Type:</strong> Nuclear</li>
-              <li><strong>Father's Occupation:</strong> Government Employee</li>
-              <li><strong>Mother's Occupation:</strong> Homemaker</li>
+              <li><strong>Father&apos;s Occupation:</strong> Government Employee</li>
+              <li><strong>Mother&apos;s Occupation:</strong> Homemaker</li>
               <li><strong>Contact Address:</strong> 123 Street, Delhi, India</li>
             </ul>
           </div>

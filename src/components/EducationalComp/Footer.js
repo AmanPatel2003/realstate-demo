@@ -57,8 +57,8 @@ const Footer = () => {
 
             <ul className="mt-3 space-y-2 font-light ">
               <li>About University</li>
-              <li>Chancellor's Message</li>
-              <li>Registrar's Message</li>
+              <li>Chancellor&apos;s Message</li>
+              <li>Registrar&apos;s Message</li>
               <li>Mission & Vision</li>
               <li>Approvals & Recognition</li>
               <li>University Management Team</li>
