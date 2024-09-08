@@ -6,30 +6,30 @@ import React, { useEffect, useState } from "react";
 
 const Page = () => {
   const router = useRouter();
-   const [formData, setFormData] = useState({
-     fullName: "",
-     phoneNumber: "",
-     email: "",
-   });
-   const [disabled, setDisabled] = useState(true);
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phoneNumber: "",
+    email: "",
+  });
+  const [disabled, setDisabled] = useState(true);
 
-   // Function to update form data (prefill example)
-   const updateFormData = () => {
-     setFormData({
-       fullName: "Gaurav Mehta",
-       phoneNumber: "8770467824",
-       email: "demo@perfios.com",
-     });
-   };
+  // Function to update form data (prefill example)
+  const updateFormData = () => {
+    setFormData({
+      fullName: "Gaurav Mehta",
+      phoneNumber: "8770467824",
+      email: "demo@perfios.com",
+    });
+  };
 
-   // Enable/Disable submit button based on form completeness
-   useEffect(() => {
-     const isFormComplete =
-       formData.fullName !== "" &&
-       formData.phoneNumber !== "" &&
-       formData.email !== "";
-     setDisabled(!isFormComplete);
-   }, [formData]);
+  // Enable/Disable submit button based on form completeness
+  useEffect(() => {
+    const isFormComplete =
+      formData.fullName !== "" &&
+      formData.phoneNumber !== "" &&
+      formData.email !== "";
+    setDisabled(!isFormComplete);
+  }, [formData]);
 
   const handleShowNotice = async () => {
     setDisabled(true);

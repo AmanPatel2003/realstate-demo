@@ -1,7 +1,7 @@
 import PreferenceCenter from "@/components/PreferenceCenter";
 import React from "react";
 
-const page = () => {
+const Page = () => {
   return (
     <div>
       <div className=" mt-32 px-24">
@@ -11,4 +11,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

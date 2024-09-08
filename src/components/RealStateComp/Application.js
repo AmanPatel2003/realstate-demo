@@ -13,7 +13,7 @@ const Application = ({ handleShowNotice, disabled, setDisabled }) => {
     rentalHistory: "",
     references: "",
     moveInDate: "",
-    documents: null,
+ 
   });
 
   const handleChange = (e) => {
@@ -45,7 +45,7 @@ const Application = ({ handleShowNotice, disabled, setDisabled }) => {
         rentalHistory: "None", // Add value if needed
         references: "John Doe", // Add value if needed
         moveInDate: "2024-10-01", // Add value if needed
-        documents: null, // Add value if needed
+       
       });
     };
 
