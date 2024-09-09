@@ -93,47 +93,60 @@ const Navbar = () => {
 
                     {isDropdownOpen && (
                      <div className="absolute right-0 mt-2 w-96 z-50 bg-white shadow-2xl rounded-lg px-4 py-4">
+                  <Link href='/health_care/preference_center'>
+                  
                      <div className="p-2 border-b border-gray-400 cursor-pointer">
                          <h1 className="text-gray-500 font-normal text-xs">22, August, 2024</h1>
                          <h1 className="text-[#FF0000] font-semibold text-sm">
                              Your consent for medical records access has expired. Please reconsent to continue receiving health services.
                          </h1>
                      </div>
-                 
+                  </Link>
+                  <Link href='/health_care/preference_center'>
+                  
                      <div className="p-2 border-b border-gray-400 cursor-pointer">
                          <h1 className="text-gray-500 font-normal text-xs">22, August, 2024</h1>
                          <h1 className="text-gray-600 font-semibold text-sm">
                              Your lab test results for blood sugar are now available. Log in to your health portal to view.
                          </h1>
                      </div>
-                 
+                  </Link>
+                  <Link href='/health_care/preference_center'>
+                  
                      <div className="p-2 border-b border-gray-400 cursor-pointer">
                          <h1 className="text-gray-500 font-normal text-xs">23, August, 2024</h1>
                          <h1 className="text-[#FF0000] font-semibold text-sm">
                              Your consent for health record sharing has expired. Reconsent to continue with your ongoing care plan.
                          </h1>
                      </div>
-                 
+                  </Link>
+                  <Link href='/health_care/preference_center'>
+                  
                      <div className="p-2 border-b border-gray-400 cursor-pointer">
                          <h1 className="text-gray-500 font-normal text-xs">23, August, 2024</h1>
                          <h1 className="text-gray-600 font-semibold text-sm">
                              Reminder: Your follow-up appointment with Dr. Smith is scheduled for tomorrow at 10:00 AM.
                          </h1>
                      </div>
-                 
+                  </Link>
+                  <Link href='/health_care/preference_center'>
+                  
                      <div className="p-2 border-b border-gray-400 cursor-pointer">
                          <h1 className="text-gray-500 font-normal text-xs">23, August, 2024</h1>
                          <h1 className="text-[#FF0000] font-semibold text-sm">
                              Your consent for health insurance information sharing has expired. Reconsent to continue receiving health coverage.
                          </h1>
                      </div>
-                 
+                  </Link>
+                  <Link href='/health_care/preference_center'>
+                  
                      <div className="p-2 border-gray-400 cursor-pointer">
                          <h1 className="text-gray-500 font-normal text-xs">24, August, 2024</h1>
                          <h1 className="text-gray-600 font-semibold text-sm">
                              Your prescription for blood pressure medication is ready for refill.
                          </h1>
                      </div>
+                  </Link>
                  </div>
                  
                     )}
