@@ -8,7 +8,7 @@ const UserProfile = () => {
       <div className="bg-white rounded-2xl shadow-lg w-full max-w-6xl lg:flex lg:space-x-12 p-8 lg:p-12">
         {/* Left Section - Profile Picture & Personal Info */}
         <div className="lg:w-1/3 flex flex-col items-center lg:items-start">
-          <Link href="/dashboard">
+          <Link href="/matrimonial/dashboard">
             <div className="text-gray-500 hover:text-gray-700 cursor-pointer mb-6">
               <BiArrowBack size={24} />
             </div>
@@ -33,33 +33,15 @@ const UserProfile = () => {
               Personal Details
             </h2>
             <ul className="space-y-2 text-gray-600">
-              <li>
-                <strong>Date of Birth:</strong> 10th March 1990
-              </li>
-              <li>
-                <strong>Mother Tongue:</strong> Hindi
-              </li>
-              <li>
-                <strong>Religion:</strong> Hindu
-              </li>
-              <li>
-                <strong>Marital Status:</strong> Single
-              </li>
-              <li>
-                <strong>Height:</strong> 5&apos;9&quot;
-              </li>
-              <li>
-                <strong>Country:</strong> India
-              </li>
-              <li>
-                <strong>Degree:</strong> B.Tech in Computer Science
-              </li>
-              <li>
-                <strong>Employed In:</strong> Private
-              </li>
-              <li>
-                <strong>Annual Income:</strong> ₹10,00,000
-              </li>
+              <li><strong>Date of Birth:</strong> 10th March 1990</li>
+              <li><strong>Mother Tongue:</strong> Hindi</li>
+              <li><strong>Religion:</strong> Hindu</li>
+              <li><strong>Marital Status:</strong> Single</li>
+              <li><strong>Height:</strong> 5&apos;9&quot;</li>
+              <li><strong>Country:</strong> India</li>
+              <li><strong>Degree:</strong> B.Tech in Computer Science</li>
+              <li><strong>Employed In:</strong> Private</li>
+              <li><strong>Annual Income:</strong> ₹10,00,000</li>
             </ul>
           </div>
         </div>
@@ -72,18 +54,10 @@ const UserProfile = () => {
               Family Details
             </h2>
             <ul className="space-y-2 text-gray-600">
-              <li>
-                <strong>Family Type:</strong> Nuclear
-              </li>
-              <li>
-                <strong>Father&apos;s Occupation:</strong> Government Employee
-              </li>
-              <li>
-                <strong>Mother&apos;s Occupation:</strong> Homemaker
-              </li>
-              <li>
-                <strong>Contact Address:</strong> 123 Street, Delhi, India
-              </li>
+              <li><strong>Family Type:</strong> Nuclear</li>
+              <li><strong>Father&apos;s Occupation:</strong> Government Employee</li>
+              <li><strong>Mother&apos;s Occupation:</strong> Homemaker</li>
+              <li><strong>Contact Address:</strong> 123 Street, Delhi, India</li>
             </ul>
           </div>
 

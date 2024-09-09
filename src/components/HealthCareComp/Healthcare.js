@@ -11,9 +11,9 @@ const Healthcare = () => {
           Expert Care Nationwide
         </h1>
         <p className=" text-center font-medium text-[#565454] text-lg">
-          Read about Narayana Health&apos;s success stories, stay informed with
-          the latest news and media updates, and explore informative blogs from
-          our experts.
+          Read about Narayana Health&apos;s success stories, stay informed with the
+          latest news and media updates, and explore informative blogs from our
+          experts.
         </p>
       </div>
 

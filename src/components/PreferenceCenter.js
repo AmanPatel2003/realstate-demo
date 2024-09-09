@@ -33,6 +33,9 @@ import Tooltip from "@mui/material/Tooltip";
 import { PiDatabaseFill } from "react-icons/pi";
 import { BsFillBuildingsFill } from "react-icons/bs";
 import Image from "next/image";
+import { RiMoneyRupeeCircleLine } from "react-icons/ri";
+import { MdOutlineFamilyRestroom } from "react-icons/md";
+
 
 const PreferenceCenter = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -123,6 +126,8 @@ const PreferenceCenter = () => {
     dateOf: <BsCalendarDate />,
     healthId: <MdOutlineHealthAndSafety />,
     company: <BsFillBuildingsFill />,
+    income: <RiMoneyRupeeCircleLine />,
+    family:<MdOutlineFamilyRestroom />
   };
 
   const iconMapper = {
@@ -140,13 +145,18 @@ const PreferenceCenter = () => {
     Passport: icons.passport,
     "Full Name": icons.fullName,
     "Bank Account": icons.bank,
-    Gender: icons.gender,
+    Gender: icons.gender, 
     "Profile Picture": icons.profile,
     "Biometric Data": icons.biometric,
     "Bank Statement": icons.bankStatement,
     "Date of birth": icons.dateOf,
     "Abha health id": icons.healthId,
     "Company name": icons.company,
+    "Card number":icons.creditCard,
+    "Contact address":icons.address,
+    "Income": icons.income,
+    "Family type":icons.family,
+    "Mobile Number":icons.mobile
   };
 
   const languages = [

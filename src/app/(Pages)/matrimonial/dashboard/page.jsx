@@ -114,107 +114,85 @@ const Page = () => {
                                             <FaBell size={22} />
                                         </div> */}
 
-                    {showModal && (
-                      <div className="absolute right-0 mt-2 w-96 z-50   bg-white shadow-2xl rounded-lg  px-4 py-4">
-                        <Link href="/trust-bank/preference-center">
-                          <div className="p-2 border-b border-gray-400 cursor-pointer">
-                            <h1 className="text-gray-500 font-normal text-xs">
-                              {" "}
-                              22, August, 2024
-                            </h1>
-                            <h1 className="text-[#FF0000] font-semibold text-sm">
-                              Your consent for email address has expired.
-                              Reconsent to continue with service experience.
-                            </h1>
-                          </div>
-                        </Link>
-                        <Link href="/trust-bank/preference-center">
-                          <div className="p-2 border-b border-gray-400 cursor-pointer">
-                            <h1 className="text-gray-500 font-normal text-xs">
-                              {" "}
-                              22, August, 2024
-                            </h1>
-                            <h1 className="text-gray-600 font-semibold text-sm ">
-                              Your account balance is now ₹ 15,250.00.
-                            </h1>
-                          </div>
-                        </Link>
-                        <Link href="/trust-bank/preference-center">
-                          <div className="p-2 border-b border-gray-400 cursor-pointer">
-                            <h1 className="text-gray-500 font-normal text-xs">
-                              {" "}
-                              23,August,2024
-                            </h1>
-                            <h1 className="text-[#FF0000] font-semibold text-sm">
-                              Your consent for CIBL report processing has
-                              expired. Reconsent to continue with service
-                              experience
-                            </h1>
-                          </div>
-                        </Link>
-                        <Link href="/trust-bank/preference-center">
-                          <div className="p-2 border-b border-gray-400 cursor-pointer">
-                            <h1 className="text-gray-500 font-normal text-xs">
-                              {" "}
-                              23,August,2024
-                            </h1>
-                            <h1 className="text-gray-600 font-semibold text-sm">
-                              Transaction Alert: ₹ 5000.00 has been withdrawn
-                              from your account ending in 1234.
-                            </h1>
-                          </div>
-                        </Link>
-                        <Link href="/trust-bank/preference-center">
-                          <div className="p-2 border-b border-gray-400 cursor-pointer">
-                            <h1 className="text-gray-500 font-normal text-xs">
-                              {" "}
-                              23,August,2024
-                            </h1>
-                            <h1 className="text-[#FF0000] font-semibold text-sm">
-                              Your consent for mobile number has expired.
-                              Reconsent to continue wit service experience.
-                            </h1>
-                          </div>
-                        </Link>
-                        <Link href="/trust-bank/preference-center">
-                          <div className="p-2  border-gray-400 cursor-pointer">
-                            <h1 className="text-gray-500 font-normal text-xs">
-                              24,August,2024
-                            </h1>
-                            <h1 className="text-gray-600 font-semibold text-sm">
-                              Your account balance is now ₹ 10,250.00.
-                            </h1>
-                          </div>
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </div>
+                                        {showModal && (
+                                           <div className="absolute right-0 mt-2 w-96 z-50 bg-white shadow-2xl rounded-lg px-4 py-4">
+                                           <div className="p-2 border-b border-gray-400 cursor-pointer">
+                                               <h1 className="text-gray-500 font-normal text-xs">
+                                                   {" "} 22, August, 2024
+                                               </h1>
+                                               <h1 className="text-[#FF0000] font-semibold text-sm">
+                                                   Your profile is incomplete. Please update your personal details to receive better matches.
+                                               </h1>
+                                           </div>
+                                           
+                                           <div className="p-2 border-b border-gray-400 cursor-pointer">
+                                               <h1 className="text-gray-500 font-normal text-xs">
+                                                   {" "} 22, August, 2024
+                                               </h1>
+                                               <h1 className="text-gray-600 font-semibold text-sm ">
+                                                   You have 3 new matches! Check out your latest matches to find your perfect partner.
+                                               </h1>
+                                           </div>
+                                           
+                                           <div className="p-2 border-b border-gray-400 cursor-pointer">
+                                               <h1 className="text-gray-500 font-normal text-xs">
+                                                   {" "} 23, August, 2024
+                                               </h1>
+                                               <h1 className="text-[#FF0000] font-semibold text-sm">
+                                                   Your membership is about to expire. Renew now to continue enjoying premium benefits.
+                                               </h1>
+                                           </div>
+                                           
+                                           <div className="p-2 border-b border-gray-400 cursor-pointer">
+                                               <h1 className="text-gray-500 font-normal text-xs">
+                                                   {" "} 23, August, 2024
+                                               </h1>
+                                               <h1 className="text-gray-600 font-semibold text-sm">
+                                                   New interest received! Someone has shown interest in your profile.
+                                               </h1>
+                                           </div>
+                                           
+                                           <div className="p-2 border-b border-gray-400 cursor-pointer">
+                                               <h1 className="text-gray-500 font-normal text-xs">
+                                                   {" "} 23, August, 2024
+                                               </h1>
+                                               <h1 className="text-[#FF0000] font-semibold text-sm">
+                                                   Your profile visibility is low. Complete your profile to get more attention from potential matches.
+                                               </h1>
+                                           </div>
+                                           
+                                           <div className="p-2 border-gray-400 cursor-pointer">
+                                               <h1 className="text-gray-500 font-normal text-xs">
+                                                   {" "} 24, August, 2024
+                                               </h1>
+                                               <h1 className="text-gray-600 font-semibold text-sm">
+                                                   You have received a message from a potential match. View it now.
+                                               </h1>
+                                           </div>
+                                       </div>
+                                       
+                                        )}
+                                    </div>
+                                </div>
 
-                <div className="text-white pr-4">
-                  <Link href="/user_profile">
-                    <i className="fas fa-user-circle ">
-                      <LuUserCircle2 />
-                    </i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="relative  text-white text-center mt-16">
-            <h1 className="text-4xl font-semibold">
-              More than 204,123 Success Stories and counting
-            </h1>
-            <p className="mt-4 max-w-xl mx-auto">
-              As our numerous success stories prove, marriages are really made
-              at Jeevansathi.com. Here&apos;s wishing all our members who found
-              their ideal partner here a lifetime of happiness!
-            </p>
-            <button className="mt-6 bg-red-500 text-white px-6 py-2 rounded">
-              Send us your success story
-            </button>
-          </div>
-        </header>
+
+
+                                <div className="text-white pr-4">
+                                    <Link href='/matrimonial/user_profile'>
+                                        <i className="fas fa-user-circle "><LuUserCircle2 /></i>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative  text-white text-center mt-16">
+                        <h1 className="text-4xl font-semibold">More than 204,123 Success Stories and counting</h1>
+                        <p className="mt-4 max-w-xl mx-auto">
+                            As our numerous success stories prove, marriages are really made at Jeevansathi.com. Here&apos;s wishing all our members who found their ideal partner here a lifetime of happiness!
+                        </p>
+                        <button className="mt-6 bg-red-500 text-white px-6 py-2 rounded">Send us your success story</button>
+                    </div>
+                </header>
 
         {/* Year Navigation */}
         <div className="flex justify-center mt-8  relative ">
