@@ -46,10 +46,10 @@ const paymentMethods = [
   { id: 4, name: "UPI" },
 ];
 
-const MorajNoticeCenter = dynamic(
-  () => import("concur-consent/morajNoticeCenter"),
-  { ssr: false }
-);
+// const MorajNoticeCenter = dynamic(
+//   () => import("concur-consent/morajNoticeCenter"),
+//   { ssr: false }
+// );
 
 const Page = () => {
   const router = useRouter();
@@ -75,26 +75,26 @@ const Page = () => {
     setCvv('137');
   };
 
+
   const handleShowNotice = async () => {
     setIsLoading(true);
-
     if (typeof window !== "undefined") {
-      const { morajNoticeCenter } = await MorajNoticeCenter;
+      const { morajNoticeCenter } = await import(
+        "concur-consent/morajNoticeCenter"
+      );
 
       console.log("handleShowNotice function call");
       const agreementId = localStorage.getItem("agreement_id");
       if (agreementId) {
-        // If agreement_id exists, route to the landing page
-        router.push("/matrimonial/dashboard"); // Replace with your actual landing page route
+        router.push("/matrimonial/dashboard"); 
         localStorage.removeItem("agreement_id");
       } else {
-        // If agreement_id doesn't exist, show the notice center
         morajNoticeCenter(
-          "66d95766cbd66ef0ea362853",
-          "a5b38b10e6316732",
-          "66d5b9c2cbd66ef0ea3627fd",
-          "mmEVIRTZ_UGUKJQ4Nfxgaw",
-          "gQGpM81A-LsTj6CA55IvUQz6Op_crRgjOm_b88Gs3EU"
+          "66d97619cbd66ef0ea362866",
+          "33a63dcfcc9a1e8d",
+          "66d5a0fdcbd66ef0ea3627e5",
+          "fweWzJHL0aaFZpHx9MWI3Q",
+          "0zIgEDdg3WbyU2Ev-6vpUz1oa3CUh9yHereJzAVtVsA"
         );
         setTimeout(() => {
           setIsLoading(false);
@@ -102,6 +102,34 @@ const Page = () => {
       }
     }
   };
+
+  // const handleShowNotice = async () => {
+  //   setIsLoading(true);
+
+  //   if (typeof window !== "undefined") {
+  //     const { morajNoticeCenter } = await MorajNoticeCenter;
+
+  //     console.log("handleShowNotice function call");
+  //     const agreementId = localStorage.getItem("agreement_id");
+  //     if (agreementId) {
+  //       // If agreement_id exists, route to the landing page
+  //       router.push("/matrimonial/dashboard"); // Replace with your actual landing page route
+  //       localStorage.removeItem("agreement_id");
+  //     } else {
+  //       // If agreement_id doesn't exist, show the notice center
+  //       morajNoticeCenter(
+  //         "66d95766cbd66ef0ea362853",
+  //         "a5b38b10e6316732",
+  //         "66d5b9c2cbd66ef0ea3627fd",
+  //         "mmEVIRTZ_UGUKJQ4Nfxgaw",
+  //         "gQGpM81A-LsTj6CA55IvUQz6Op_crRgjOm_b88Gs3EU"
+  //       );
+  //       setTimeout(() => {
+  //         setIsLoading(false);
+  //       }, 2000);
+  //     }
+  //   }
+  // };
 
   const validateFields = () => {
     let tempErrors = {};

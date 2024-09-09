@@ -76,6 +76,8 @@ const Navbar = () => {
 
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-96 z-50 bg-white shadow-2xl rounded-lg px-4 py-4">
+                   <Link href='/educational-Institute/preference-center'>
+                  
                   <div className="p-2 border-b border-gray-400 cursor-pointer">
                     <h1 className="text-gray-500 font-normal text-xs">
                       22, August, 2024
@@ -84,7 +86,9 @@ const Navbar = () => {
                       Your registration for the Fall 2024 semester is pending. Please complete your registration by the deadline.
                     </h1>
                   </div>
-
+                  </Link>
+                  <Link href='/educational-Institute/preference-center'>
+                  
                   <div className="p-2 border-b border-gray-400 cursor-pointer">
                     <h1 className="text-gray-500 font-normal text-xs">
                       22, August, 2024
@@ -93,7 +97,9 @@ const Navbar = () => {
                       Your tuition fee payment of ₹ 75,000.00 has been successfully processed.
                     </h1>
                   </div>
-
+                  </Link>
+                  <Link href='/educational-Institute/preference-center'>
+                  
                   <div className="p-2 border-b border-gray-400 cursor-pointer">
                     <h1 className="text-gray-500 font-normal text-xs">
                       23, August, 2024
@@ -102,7 +108,9 @@ const Navbar = () => {
                       Your access to the student library has expired. Please renew your membership for uninterrupted access.
                     </h1>
                   </div>
-
+                  </Link>
+                  <Link href='/educational-Institute/preference-center'>
+                  
                   <div className="p-2 border-b border-gray-400 cursor-pointer">
                     <h1 className="text-gray-500 font-normal text-xs">
                       23, August, 2024
@@ -111,7 +119,9 @@ const Navbar = () => {
                       Exam schedule for the Fall 2024 semester has been released. Check your student portal for details.
                     </h1>
                   </div>
-
+                  </Link>
+                  <Link href='/educational-Institute/preference-center'>
+                  
                   <div className="p-2 border-b border-gray-400 cursor-pointer">
                     <h1 className="text-gray-500 font-normal text-xs">
                       23, August, 2024
@@ -120,7 +130,9 @@ const Navbar = () => {
                       Your course enrollment for the new semester is incomplete. Please enroll before the deadline.
                     </h1>
                   </div>
-
+                  </Link>
+                  <Link href='/educational-Institute/preference-center'>
+                  
                   <div className="p-2 border-gray-400 cursor-pointer">
                     <h1 className="text-gray-500 font-normal text-xs">
                       24, August, 2024
@@ -129,6 +141,7 @@ const Navbar = () => {
                       Your final grades for the Spring 2024 semester are now available. Visit your student portal to view them.
                     </h1>
                   </div>
+                  </Link>
                 </div>
 
               )}

@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 w-96 z-50 bg-white shadow-2xl rounded-lg px-4 py-4">
-                  {/* <Link href="/real-estate/notifications"> */}
+                  <Link href="/real_state/preference-center">
                       <div className="p-2 border-b border-gray-400 cursor-pointer">
                           <h1 className="text-gray-500 font-normal text-xs">
                               {" "}
@@ -89,8 +89,8 @@ const Navbar = () => {
                               Your listing for &quot;Luxury Apartment in Downtown&quot; is about to expire. Renew to keep it active.
                           </h1>
                       </div>
-                  {/* </Link> */}
-                  {/* <Link href="/real-estate/notifications"> */}
+                  </Link>
+                  <Link href="/real_state/preference-center">
                       <div className="p-2 border-b border-gray-400 cursor-pointer">
                           <h1 className="text-gray-500 font-normal text-xs">
                               {" "}
@@ -100,8 +100,8 @@ const Navbar = () => {
                               Price Update: The price of &quot;Modern Family Home in Suburbia&quot; has changed to ₹ 15,250,000.00.
                           </h1>
                       </div>
-                  {/* </Link> */}
-                  {/* <Link href="/real-estate/notifications"> */}
+                  </Link>
+                  <Link href="/real_state/preference-center">
                       <div className="p-2 border-b border-gray-400 cursor-pointer">
                           <h1 className="text-gray-500 font-normal text-xs">
                               {" "}
@@ -111,8 +111,8 @@ const Navbar = () => {
                               Your consent for property photoshoot has expired. Reauthorize to continue marketing your listing.
                           </h1>
                       </div>
-                  {/* </Link> */}
-                  {/* <Link href="/real-estate/notifications"> */}
+                  </Link>
+                  <Link href="/real_state/preference-center">
                       <div className="p-2 border-b border-gray-400 cursor-pointer">
                           <h1 className="text-gray-500 font-normal text-xs">
                               {" "}
@@ -122,8 +122,8 @@ const Navbar = () => {
                               Viewing Alert: A client has scheduled a viewing for &quot;Seaside Villa&quot; on 24, August, 2024.
                           </h1>
                       </div>
-                  {/* </Link> */}
-                  {/* <Link href="/real-estate/notifications"> */}
+                  </Link>
+                  <Link href="/real_state/preference-center">
                       <div className="p-2 border-b border-gray-400 cursor-pointer">
                           <h1 className="text-gray-500 font-normal text-xs">
                               {" "}
@@ -133,8 +133,8 @@ const Navbar = () => {
                               Your consent for virtual tour service has expired. Reauthorize to keep your virtual tours available.
                           </h1>
                       </div>
-                  {/* </Link> */}
-                  {/* <Link href="/real-estate/notifications"> */}
+                  </Link>
+                  <Link href="/real_state/preference-center">
                       <div className="p-2 border-gray-400 cursor-pointer">
                           <h1 className="text-gray-500 font-normal text-xs">
                               24, August, 2024
@@ -143,7 +143,7 @@ const Navbar = () => {
                               Offer Received: You&apos;ve received a new offer of ₹ 10,250,000.00 for &quot;Downtown Loft&quot;.
                           </h1>
                       </div>
-                  {/* </Link> */}
+                  </Link>
               </div>
               
                 )}
