@@ -149,7 +149,7 @@ const Navbar = () => {
                 )}
               </div>
             </div>
-            <Link href="/preference-center">
+            <Link href="/real_state/preference-center">
               <FaUserCircle size={25} />
             </Link>
           </div>
